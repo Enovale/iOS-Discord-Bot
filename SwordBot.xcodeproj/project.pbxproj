@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFDCBC382148757D00CFFBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */; };
+		CFDCBC3A2148757D00CFFBF8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */; };
+		CFDCBC3C2148757D00CFFBF8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */; };
+		CFDCBC3F2148757D00CFFBF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDCBC3D2148757D00CFFBF8 /* Main.storyboard */; };
+		CFDCBC412148757D00CFFBF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDCBC402148757D00CFFBF8 /* Assets.xcassets */; };
+		CFDCBC442148757D00CFFBF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDCBC422148757D00CFFBF8 /* LaunchScreen.storyboard */; };
+		CFDCBC4F2148757D00CFFBF8 /* SwordBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC4E2148757D00CFFBF8 /* SwordBotTests.swift */; };
+		CFDCBC5A2148757D00CFFBF8 /* SwordBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC592148757D00CFFBF8 /* SwordBotUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFDCBC4B2148757D00CFFBF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFDCBC2C2148757D00CFFBF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDCBC332148757D00CFFBF8;
+			remoteInfo = SwordBot;
+		};
+		CFDCBC562148757D00CFFBF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFDCBC2C2148757D00CFFBF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDCBC332148757D00CFFBF8;
+			remoteInfo = SwordBot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CFDCBC342148757D00CFFBF8 /* SwordBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwordBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CFDCBC3E2148757D00CFFBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFDCBC402148757D00CFFBF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFDCBC432148757D00CFFBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFDCBC452148757D00CFFBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFDCBC4A2148757D00CFFBF8 /* SwordBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwordBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDCBC4E2148757D00CFFBF8 /* SwordBotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwordBotTests.swift; sourceTree = "<group>"; };
+		CFDCBC502148757D00CFFBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFDCBC552148757D00CFFBF8 /* SwordBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwordBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFDCBC592148757D00CFFBF8 /* SwordBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwordBotUITests.swift; sourceTree = "<group>"; };
+		CFDCBC5B2148757E00CFFBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFDCBC312148757D00CFFBF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDCBC472148757D00CFFBF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDCBC522148757D00CFFBF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFDCBC2B2148757D00CFFBF8 = {
+			isa = PBXGroup;
+			children = (
+				CFDCBC362148757D00CFFBF8 /* SwordBot */,
+				CFDCBC4D2148757D00CFFBF8 /* SwordBotTests */,
+				CFDCBC582148757D00CFFBF8 /* SwordBotUITests */,
+				CFDCBC352148757D00CFFBF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFDCBC352148757D00CFFBF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFDCBC342148757D00CFFBF8 /* SwordBot.app */,
+				CFDCBC4A2148757D00CFFBF8 /* SwordBotTests.xctest */,
+				CFDCBC552148757D00CFFBF8 /* SwordBotUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFDCBC362148757D00CFFBF8 /* SwordBot */ = {
+			isa = PBXGroup;
+			children = (
+				CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */,
+				CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */,
+				CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */,
+				CFDCBC3D2148757D00CFFBF8 /* Main.storyboard */,
+				CFDCBC402148757D00CFFBF8 /* Assets.xcassets */,
+				CFDCBC422148757D00CFFBF8 /* LaunchScreen.storyboard */,
+				CFDCBC452148757D00CFFBF8 /* Info.plist */,
+			);
+			path = SwordBot;
+			sourceTree = "<group>";
+		};
+		CFDCBC4D2148757D00CFFBF8 /* SwordBotTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFDCBC4E2148757D00CFFBF8 /* SwordBotTests.swift */,
+				CFDCBC502148757D00CFFBF8 /* Info.plist */,
+			);
+			path = SwordBotTests;
+			sourceTree = "<group>";
+		};
+		CFDCBC582148757D00CFFBF8 /* SwordBotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFDCBC592148757D00CFFBF8 /* SwordBotUITests.swift */,
+				CFDCBC5B2148757E00CFFBF8 /* Info.plist */,
+			);
+			path = SwordBotUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFDCBC332148757D00CFFBF8 /* SwordBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFDCBC5E2148757E00CFFBF8 /* Build configuration list for PBXNativeTarget "SwordBot" */;
+			buildPhases = (
+				CFDCBC302148757D00CFFBF8 /* Sources */,
+				CFDCBC312148757D00CFFBF8 /* Frameworks */,
+				CFDCBC322148757D00CFFBF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwordBot;
+			productName = SwordBot;
+			productReference = CFDCBC342148757D00CFFBF8 /* SwordBot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFDCBC492148757D00CFFBF8 /* SwordBotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFDCBC612148757E00CFFBF8 /* Build configuration list for PBXNativeTarget "SwordBotTests" */;
+			buildPhases = (
+				CFDCBC462148757D00CFFBF8 /* Sources */,
+				CFDCBC472148757D00CFFBF8 /* Frameworks */,
+				CFDCBC482148757D00CFFBF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFDCBC4C2148757D00CFFBF8 /* PBXTargetDependency */,
+			);
+			name = SwordBotTests;
+			productName = SwordBotTests;
+			productReference = CFDCBC4A2148757D00CFFBF8 /* SwordBotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFDCBC542148757D00CFFBF8 /* SwordBotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFDCBC642148757E00CFFBF8 /* Build configuration list for PBXNativeTarget "SwordBotUITests" */;
+			buildPhases = (
+				CFDCBC512148757D00CFFBF8 /* Sources */,
+				CFDCBC522148757D00CFFBF8 /* Frameworks */,
+				CFDCBC532148757D00CFFBF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFDCBC572148757D00CFFBF8 /* PBXTargetDependency */,
+			);
+			name = SwordBotUITests;
+			productName = SwordBotUITests;
+			productReference = CFDCBC552148757D00CFFBF8 /* SwordBotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFDCBC2C2148757D00CFFBF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Elijah;
+				TargetAttributes = {
+					CFDCBC332148757D00CFFBF8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					CFDCBC492148757D00CFFBF8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CFDCBC332148757D00CFFBF8;
+					};
+					CFDCBC542148757D00CFFBF8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CFDCBC332148757D00CFFBF8;
+					};
+				};
+			};
+			buildConfigurationList = CFDCBC2F2148757D00CFFBF8 /* Build configuration list for PBXProject "SwordBot" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFDCBC2B2148757D00CFFBF8;
+			productRefGroup = CFDCBC352148757D00CFFBF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFDCBC332148757D00CFFBF8 /* SwordBot */,
+				CFDCBC492148757D00CFFBF8 /* SwordBotTests */,
+				CFDCBC542148757D00CFFBF8 /* SwordBotUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFDCBC322148757D00CFFBF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDCBC442148757D00CFFBF8 /* LaunchScreen.storyboard in Resources */,
+				CFDCBC412148757D00CFFBF8 /* Assets.xcassets in Resources */,
+				CFDCBC3F2148757D00CFFBF8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDCBC482148757D00CFFBF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDCBC532148757D00CFFBF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFDCBC302148757D00CFFBF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDCBC3C2148757D00CFFBF8 /* SecondViewController.swift in Sources */,
+				CFDCBC382148757D00CFFBF8 /* AppDelegate.swift in Sources */,
+				CFDCBC3A2148757D00CFFBF8 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDCBC462148757D00CFFBF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDCBC4F2148757D00CFFBF8 /* SwordBotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFDCBC512148757D00CFFBF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFDCBC5A2148757D00CFFBF8 /* SwordBotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFDCBC4C2148757D00CFFBF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFDCBC332148757D00CFFBF8 /* SwordBot */;
+			targetProxy = CFDCBC4B2148757D00CFFBF8 /* PBXContainerItemProxy */;
+		};
+		CFDCBC572148757D00CFFBF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFDCBC332148757D00CFFBF8 /* SwordBot */;
+			targetProxy = CFDCBC562148757D00CFFBF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CFDCBC3D2148757D00CFFBF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFDCBC3E2148757D00CFFBF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFDCBC422148757D00CFFBF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFDCBC432148757D00CFFBF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFDCBC5C2148757E00CFFBF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFDCBC5D2148757E00CFFBF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFDCBC5F2148757E00CFFBF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWG8VUH2Z6;
+				INFOPLIST_FILE = SwordBot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFDCBC602148757E00CFFBF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWG8VUH2Z6;
+				INFOPLIST_FILE = SwordBot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CFDCBC622148757E00CFFBF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWG8VUH2Z6;
+				INFOPLIST_FILE = SwordBotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwordBot.app/SwordBot";
+			};
+			name = Debug;
+		};
+		CFDCBC632148757E00CFFBF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWG8VUH2Z6;
+				INFOPLIST_FILE = SwordBotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwordBot.app/SwordBot";
+			};
+			name = Release;
+		};
+		CFDCBC652148757E00CFFBF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWG8VUH2Z6;
+				INFOPLIST_FILE = SwordBotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwordBot;
+			};
+			name = Debug;
+		};
+		CFDCBC662148757E00CFFBF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWG8VUH2Z6;
+				INFOPLIST_FILE = SwordBotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwordBot;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFDCBC2F2148757D00CFFBF8 /* Build configuration list for PBXProject "SwordBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDCBC5C2148757E00CFFBF8 /* Debug */,
+				CFDCBC5D2148757E00CFFBF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFDCBC5E2148757E00CFFBF8 /* Build configuration list for PBXNativeTarget "SwordBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDCBC5F2148757E00CFFBF8 /* Debug */,
+				CFDCBC602148757E00CFFBF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFDCBC612148757E00CFFBF8 /* Build configuration list for PBXNativeTarget "SwordBotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDCBC622148757E00CFFBF8 /* Debug */,
+				CFDCBC632148757E00CFFBF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFDCBC642148757E00CFFBF8 /* Build configuration list for PBXNativeTarget "SwordBotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFDCBC652148757E00CFFBF8 /* Debug */,
+				CFDCBC662148757E00CFFBF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFDCBC2C2148757D00CFFBF8 /* Project object */;
+}
