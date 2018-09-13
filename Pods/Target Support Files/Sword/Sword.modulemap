@@ -1,0 +1,6 @@
+framework module Sword {
+  umbrella header "Sword-umbrella.h"
+
+  export *
+  module * { export * }
+}

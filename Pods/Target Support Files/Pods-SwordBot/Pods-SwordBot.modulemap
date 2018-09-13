@@ -1,0 +1,6 @@
+framework module Pods_SwordBot {
+  umbrella header "Pods-SwordBot-umbrella.h"
+
+  export *
+  module * { export * }
+}

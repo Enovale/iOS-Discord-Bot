@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF936EF6808DD20008BAB50E /* Pods_SwordBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */; };
+		CFD01A0A2149BD9E00C9936C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD01A092149BD9E00C9936C /* BackgroundTask.swift */; };
+		CFD01A0C2149BDBA00C9936C /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0B2149BDBA00C9936C /* blank.wav */; };
+		CFD01A0E2149F75800C9936C /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0D2149F75800C9936C /* song.mp3 */; };
+		CFD01A12214A144B00C9936C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD01A11214A144B00C9936C /* SettingsViewController.swift */; };
+		CFD01A14214A192300C9936C /* squid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A13214A192200C9936C /* squid.jpg */; };
 		CFDCBC382148757D00CFFBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */; };
 		CFDCBC3A2148757D00CFFBF8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */; };
 		CFDCBC3C2148757D00CFFBF8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */; };
@@ -35,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24C9FBD11D1D05B9739ABDBD /* Pods-SwordBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwordBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot.debug.xcconfig"; sourceTree = "<group>"; };
+		4E43DE2145431AA2CCEFDC3B /* Pods-SwordBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwordBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot.release.xcconfig"; sourceTree = "<group>"; };
+		AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwordBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD01A092149BD9E00C9936C /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
+		CFD01A0B2149BDBA00C9936C /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
+		CFD01A0D2149F75800C9936C /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		CFD01A11214A144B00C9936C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CFD01A13214A192200C9936C /* squid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = squid.jpg; sourceTree = "<group>"; };
 		CFDCBC342148757D00CFFBF8 /* SwordBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwordBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF936EF6808DD20008BAB50E /* Pods_SwordBot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A6EC6CE0587D9C01A21612E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CFDCBC2B2148757D00CFFBF8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,8 @@
 				CFDCBC4D2148757D00CFFBF8 /* SwordBotTests */,
 				CFDCBC582148757D00CFFBF8 /* SwordBotUITests */,
 				CFDCBC352148757D00CFFBF8 /* Products */,
+				D56CC8C597F4EA8CA8087D5A /* Pods */,
+				6A6EC6CE0587D9C01A21612E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +124,14 @@
 		CFDCBC362148757D00CFFBF8 /* SwordBot */ = {
 			isa = PBXGroup;
 			children = (
+				CFD01A0B2149BDBA00C9936C /* blank.wav */,
+				CFD01A0D2149F75800C9936C /* song.mp3 */,
+				CFD01A13214A192200C9936C /* squid.jpg */,
 				CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */,
 				CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */,
 				CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */,
+				CFD01A11214A144B00C9936C /* SettingsViewController.swift */,
+				CFD01A092149BD9E00C9936C /* BackgroundTask.swift */,
 				CFDCBC3D2148757D00CFFBF8 /* Main.storyboard */,
 				CFDCBC402148757D00CFFBF8 /* Assets.xcassets */,
 				CFDCBC422148757D00CFFBF8 /* LaunchScreen.storyboard */,
@@ -128,6 +158,15 @@
 			path = SwordBotUITests;
 			sourceTree = "<group>";
 		};
+		D56CC8C597F4EA8CA8087D5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24C9FBD11D1D05B9739ABDBD /* Pods-SwordBot.debug.xcconfig */,
+				4E43DE2145431AA2CCEFDC3B /* Pods-SwordBot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFDCBC5E2148757E00CFFBF8 /* Build configuration list for PBXNativeTarget "SwordBot" */;
 			buildPhases = (
+				CCDED2A2EB2C9245207E75FD /* [CP] Check Pods Manifest.lock */,
 				CFDCBC302148757D00CFFBF8 /* Sources */,
 				CFDCBC312148757D00CFFBF8 /* Frameworks */,
 				CFDCBC322148757D00CFFBF8 /* Resources */,
+				281093709DCD8B3899417412 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,6 +238,11 @@
 					CFDCBC332148757D00CFFBF8 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					CFDCBC492148757D00CFFBF8 = {
 						CreatedOnToolsVersion = 9.2;
@@ -236,8 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFDCBC442148757D00CFFBF8 /* LaunchScreen.storyboard in Resources */,
+				CFD01A0E2149F75800C9936C /* song.mp3 in Resources */,
+				CFD01A0C2149BDBA00C9936C /* blank.wav in Resources */,
 				CFDCBC412148757D00CFFBF8 /* Assets.xcassets in Resources */,
 				CFDCBC3F2148757D00CFFBF8 /* Main.storyboard in Resources */,
+				CFD01A14214A192300C9936C /* squid.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +306,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		281093709DCD8B3899417412 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/Sword/Sword.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sword.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDED2A2EB2C9245207E75FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwordBot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFDCBC302148757D00CFFBF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +354,8 @@
 			files = (
 				CFDCBC3C2148757D00CFFBF8 /* SecondViewController.swift in Sources */,
 				CFDCBC382148757D00CFFBF8 /* AppDelegate.swift in Sources */,
+				CFD01A0A2149BD9E00C9936C /* BackgroundTask.swift in Sources */,
+				CFD01A12214A144B00C9936C /* SettingsViewController.swift in Sources */,
 				CFDCBC3A2148757D00CFFBF8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -418,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -428,6 +520,7 @@
 		};
 		CFDCBC5F2148757E00CFFBF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24C9FBD11D1D05B9739ABDBD /* Pods-SwordBot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +536,7 @@
 		};
 		CFDCBC602148757E00CFFBF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E43DE2145431AA2CCEFDC3B /* Pods-SwordBot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,963 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03C9896D34737A3856CB3CF23C2647BC /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813F4C09EB1FC04EC9CA01E35127696 /* Log.swift */; };
+		066DCC8EABC082024B469058B70BDC20 /* GroupDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92724E62B6F86B6EE08B2ED03C90A58D /* GroupDM.swift */; };
+		06FD023A37F432882546C124F67BE20D /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA0310E83437E8D5699D8E87C404BB /* Endpoints.swift */; };
+		07883CA7B384C9AFEDD888CD9143154C /* Snowflake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C16A0369BAF8100F3A3493483F264 /* Snowflake.swift */; };
+		07D6154C2346D317D97A3EAD8001FCF6 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EB519CE4B7A82386F45FCD68392235 /* Permissions.swift */; };
+		0B67341722B05A742AFA2FE76100CDCB /* Invite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC08E4CC5F6826429F16D0E89BC5028 /* Invite.swift */; };
+		0BA72675BAC6EA9A1E924C3789E49328 /* Eventable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E440EB0BAF6A7CD8DFB7455D883FA80 /* Eventable.swift */; };
+		0BF13B1D2A218929708C1B8F8D039D83 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20E6B47276A3782045BC8555C400EA /* Enums.swift */; };
+		1306EE5E7AC782394989CD4D14BAF038 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB7354FB5E5B2ABC19D4342317DA8F /* JSON.swift */; };
+		17D566140712D5F87D40782C83BDD99A /* RateLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18452004EB2333AA9DE7E1EE37559DB8 /* RateLimit.swift */; };
+		18EA599E188D6B5932C9BB10166E7E15 /* Bucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06C27B11040C2948A69717BA3742FFA /* Bucket.swift */; };
+		1C73B8A97065099D7D0791A20B095F4A /* Sword-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2448536C0CDE53628C996E4AE7B39F9 /* Sword-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		302896C0A71B955389A719639ED40607 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDC4DD366BA47FC0F30B848DA5752D /* Command.swift */; };
+		30EBF0FD141CD84DD251F8A4C89F560A /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC563F07A7762C0C373DBDE02D9C268F /* Options.swift */; };
+		393501FE11DE5ED817613A335C597437 /* DM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B11F88D5FB0101D26F7616AD4ED2B /* DM.swift */; };
+		3DE33D3FDF73445CF071DDEB0895717B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5601147A9F19E3DDBE45E16E4BEA498C /* User.swift */; };
+		442FB5AE32386B67A2AD43521F2E1036 /* Webhook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD95498D43C0B496647F11BAC902A7 /* Webhook.swift */; };
+		5115377263265D751196BEEBC50A6734 /* Gateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46802AFA110FC366444012EB65F7D46 /* Gateway.swift */; };
+		54C081C02924BC8F4294A56B70E91228 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156457B50DFC6D656482D2C51F422D7 /* Channel.swift */; };
+		5624F962EA3E4ABFF69C0199E48B31E4 /* GatewayHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6EF455ECF4C245FDDE7FD2482F366 /* GatewayHandler.swift */; };
+		5A360A0415D4F1E030F03B9EDDFF7FC3 /* ShardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF742AA74052969DB80D3B4E7BA6B23E /* ShardManager.swift */; };
+		5AAB06F2C067B2F9ADBF0D3DD62AF79D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1557E16EEB03DF76FAA8495BED408 /* Utils.swift */; };
+		657A46CDB510658568FD087B3E804319 /* Pods-SwordBot-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E41520E50F0369566D44EBA2E36DF7 /* Pods-SwordBot-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CEE41BBC3E49BD62A408C7EEE6EF8C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE7EF2F4F6B3BD5AEB2E743044D62A /* Message.swift */; };
+		6D92C331FEB46F7C36070A67EC96D16B /* VoiceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE92E41C058B70E6AB30587439A3A2F /* VoiceState.swift */; };
+		7820BBC94D580CA30E0681627D7749B1 /* Sword-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 950014D7CE6631D7F5D8A91AE6D7A8EB /* Sword-dummy.m */; };
+		78620511131FB7FE3B44B886D1575A6F /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DD848071EADA556BB34A69AD2CC832 /* SSLSecurity.swift */; };
+		7E7C8690C175D00F0D968CD3E73076AE /* GuildText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF99E535C3FBA624B0662ED02C783BBA /* GuildText.swift */; };
+		8440966A3BB637835C4BE828AC94E7F5 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC65EB41B89729983737FCDD90C5526 /* EventHandler.swift */; };
+		84E3AF89D783898C3A86EB00AC344871 /* GuildVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287FBFA798D422C0C777D385CFD9B5E /* GuildVoice.swift */; };
+		94447398E4AB2E3FB41B2C84899A4821 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
+		99E85FB5941D3A87F880DB16446EC28E /* Heartbeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF5AE74243A7F415C12655DC1B7C3DB /* Heartbeat.swift */; };
+		9B5CED4C140A036C05C00046E280334B /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF2A94EA2D2B0593F2184AA761629A /* Role.swift */; };
+		9DCF052FD8C1859BEEA53A2DA712CCFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
+		A0DB89D84C316EF1851F9061591CE719 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93A45F35A05665786F94422584C4F809 /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1BA6935A668B94072946C617736F8ED /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF46467D08CDDE5A39DEE53E242D5D8 /* Request.swift */; };
+		A21F5A6DD4D0CE920E3C2004ECB69D8F /* MultipartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4F05364246EFAEB91C39365B0A07F /* MultipartBody.swift */; };
+		A7186B7605FC04A7E5B529D9AD5CE28B /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF005DE185AA435B45770605CE23BC5 /* Updatable.swift */; };
+		BB0E32D9F55115DDDC5B7BD6445DD4B1 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39444865127B4D2FA603BB64F780E7 /* WebSocket.swift */; };
+		C60E1CB53E1E8CD1FB0286045B5BB81F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F330CC2D049E7DBEE19B1AF45DACFEC /* Error.swift */; };
+		CC21B83D4743FD7988ABF5A4C6BA4EB9 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2BCE1779FDFF0A74A9F63049B672A /* Compression.swift */; };
+		CDDF0C8369DA98CB8348A1D013CDBBB5 /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3912B3D6A79CA457614D27FF743EACB /* Sword.swift */; };
+		D1BCDF35BCEDA19E57D40422279D5552 /* Pods-SwordBot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF3F74050B01283983450938ECF57E6 /* Pods-SwordBot-dummy.m */; };
+		DD385376D08DD3385273653EAA5E568A /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A192D486B4028F8685510279212831B /* Emoji.swift */; };
+		E5D7CA660A48DE0C8524DDB56D41C452 /* Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7825DB04E5F3F7A762B36693B4C37C /* Guild.swift */; };
+		E7965DA31E454EC26F677D365ED8A5EF /* Shield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11107C521FDC337A82964310D90D7327 /* Shield.swift */; };
+		ED506431BBFAF203A775433B0120F6AF /* AuditLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4428F03A873027B19C5CB18C65D13D3 /* AuditLog.swift */; };
+		EEFF7A03FCE2F497444955D23231500D /* EndpointInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3696DB7BFB51EDE0242043D23BFE86AB /* EndpointInfo.swift */; };
+		F0A8725594EF9AE930FBF9A665184867 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C8B1BCF7E904ADE3C12F1DE1E0F79 /* Member.swift */; };
+		F19F8230EAD1ECAC38A5E1AD711A7B00 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8497ADDBDA8F88F646EECE481603683 /* Starscream-dummy.m */; };
+		F1F4E2B12507EC1719D9836F4E7A0EAA /* Shard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC86622F637817E2199D92FB8EDAA8E /* Shard.swift */; };
+		F737E8F4140DB1A7DEBF9E410D7B96B3 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F52249DD4D3DD3159B64A42F2E7349B /* Starscream.framework */; };
+		F7F3CF070F0BDEFD80F79FC0966C3674 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
+		FE4D84F8A22E54B0900865D4C46DB27E /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47264EFF2309CB6F375EA1C1B2387170 /* Payload.swift */; };
+		FF1C17D92FE8B59C1FEBD14A2F26B38E /* GuildCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB49743AB1440AC5A12F3641BAFE11 /* GuildCategory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30BE990EE588C6E0BAF683C5D7DE7EC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD87E6113E422749F366D01A960CC4B;
+			remoteInfo = Starscream;
+		};
+		B552D98E9FC0F36C1892C8240F5C864B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E963232704A9F8DA25951A4FE99239;
+			remoteInfo = Sword;
+		};
+		FEFB69BDE8AF0C53295CD14AEA95062C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD87E6113E422749F366D01A960CC4B;
+			remoteInfo = Starscream;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03032BBB9A2882D961D20380F8321EEE /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
+		06A1FD9B3A203ED0733E477DE833D02A /* Pods-SwordBot-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwordBot-acknowledgements.plist"; sourceTree = "<group>"; };
+		0B39444865127B4D2FA603BB64F780E7 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/WebSocket.swift; sourceTree = "<group>"; };
+		0F52249DD4D3DD3159B64A42F2E7349B /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF46467D08CDDE5A39DEE53E242D5D8 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Sources/Sword/Rest/Request.swift; sourceTree = "<group>"; };
+		11107C521FDC337A82964310D90D7327 /* Shield.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shield.swift; path = Sources/Sword/Shield/Shield.swift; sourceTree = "<group>"; };
+		16E41520E50F0369566D44EBA2E36DF7 /* Pods-SwordBot-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwordBot-umbrella.h"; sourceTree = "<group>"; };
+		18452004EB2333AA9DE7E1EE37559DB8 /* RateLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RateLimit.swift; path = Sources/Sword/Rest/RateLimit.swift; sourceTree = "<group>"; };
+		1EC08E4CC5F6826429F16D0E89BC5028 /* Invite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Invite.swift; path = Sources/Sword/Types/Invite.swift; sourceTree = "<group>"; };
+		2262A42C80CE81AD435E8561B2E78BAC /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
+		242DA4F1B2330BC8114880DDE895419B /* Pods_SwordBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwordBot.framework; path = "Pods-SwordBot.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9194B22BC0C262D374852E221E7A0B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3116E7E496F250DC747D5AD6DB054D1B /* Pods-SwordBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwordBot.debug.xcconfig"; sourceTree = "<group>"; };
+		35FF2A94EA2D2B0593F2184AA761629A /* Role.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Role.swift; path = Sources/Sword/Types/Role.swift; sourceTree = "<group>"; };
+		367B3510B3DB99C25EF0631EC2D88F5F /* Sword.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Sword.xcconfig; sourceTree = "<group>"; };
+		3696DB7BFB51EDE0242043D23BFE86AB /* EndpointInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndpointInfo.swift; path = Sources/Sword/Rest/EndpointInfo.swift; sourceTree = "<group>"; };
+		3A192D486B4028F8685510279212831B /* Emoji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = Sources/Sword/Types/Emoji.swift; sourceTree = "<group>"; };
+		3FC65EB41B89729983737FCDD90C5526 /* EventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventHandler.swift; path = Sources/Sword/Gateway/EventHandler.swift; sourceTree = "<group>"; };
+		47264EFF2309CB6F375EA1C1B2387170 /* Payload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Payload.swift; path = Sources/Sword/Gateway/Payload.swift; sourceTree = "<group>"; };
+		4A7A857B85790AAB6DB8E449FA513172 /* Pods-SwordBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwordBot.release.xcconfig"; sourceTree = "<group>"; };
+		4CFB7354FB5E5B2ABC19D4342317DA8F /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/Sword/Utils/JSON.swift; sourceTree = "<group>"; };
+		508C8B1BCF7E904ADE3C12F1DE1E0F79 /* Member.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Member.swift; path = Sources/Sword/Types/Member.swift; sourceTree = "<group>"; };
+		50F2BCE1779FDFF0A74A9F63049B672A /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression.swift; sourceTree = "<group>"; };
+		5287FBFA798D422C0C777D385CFD9B5E /* GuildVoice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GuildVoice.swift; path = Sources/Sword/Types/GuildVoice.swift; sourceTree = "<group>"; };
+		5601147A9F19E3DDBE45E16E4BEA498C /* User.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = User.swift; path = Sources/Sword/Types/User.swift; sourceTree = "<group>"; };
+		5AC86622F637817E2199D92FB8EDAA8E /* Shard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shard.swift; path = Sources/Sword/Gateway/Shard.swift; sourceTree = "<group>"; };
+		5F330CC2D049E7DBEE19B1AF45DACFEC /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Sword/Utils/Error.swift; sourceTree = "<group>"; };
+		637941EF849EA44A1A081142F6D15428 /* Pods-SwordBot-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwordBot-acknowledgements.markdown"; sourceTree = "<group>"; };
+		639B11F88D5FB0101D26F7616AD4ED2B /* DM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DM.swift; path = Sources/Sword/Types/DM.swift; sourceTree = "<group>"; };
+		63BD95498D43C0B496647F11BAC902A7 /* Webhook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Webhook.swift; path = Sources/Sword/Types/Webhook.swift; sourceTree = "<group>"; };
+		64A4F05364246EFAEB91C39365B0A07F /* MultipartBody.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartBody.swift; path = Sources/Sword/Rest/MultipartBody.swift; sourceTree = "<group>"; };
+		65B6EF455ECF4C245FDDE7FD2482F366 /* GatewayHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GatewayHandler.swift; path = Sources/Sword/Gateway/GatewayHandler.swift; sourceTree = "<group>"; };
+		68DD848071EADA556BB34A69AD2CC832 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Sources/SSLSecurity.swift; sourceTree = "<group>"; };
+		6E440EB0BAF6A7CD8DFB7455D883FA80 /* Eventable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Eventable.swift; path = Sources/Sword/Gateway/Eventable.swift; sourceTree = "<group>"; };
+		6F7825DB04E5F3F7A762B36693B4C37C /* Guild.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Guild.swift; path = Sources/Sword/Types/Guild.swift; sourceTree = "<group>"; };
+		7D19E8B076DA1914DFFBB1EFC151ED57 /* Sword-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Sword-prefix.pch"; sourceTree = "<group>"; };
+		7FB1557E16EEB03DF76FAA8495BED408 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/Sword/Utils/Utils.swift; sourceTree = "<group>"; };
+		80F560AD054C514549C3C75A740CE376 /* Pods-SwordBot-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwordBot-frameworks.sh"; sourceTree = "<group>"; };
+		8BE92E41C058B70E6AB30587439A3A2F /* VoiceState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoiceState.swift; path = Sources/Sword/Types/VoiceState.swift; sourceTree = "<group>"; };
+		92724E62B6F86B6EE08B2ED03C90A58D /* GroupDM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupDM.swift; path = Sources/Sword/Types/GroupDM.swift; sourceTree = "<group>"; };
+		93A45F35A05665786F94422584C4F809 /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93E4D5E533095AF7072AA38395B3C9D9 /* Pods-SwordBot-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwordBot-resources.sh"; sourceTree = "<group>"; };
+		950014D7CE6631D7F5D8A91AE6D7A8EB /* Sword-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Sword-dummy.m"; sourceTree = "<group>"; };
+		953C16A0369BAF8100F3A3493483F264 /* Snowflake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Snowflake.swift; path = Sources/Sword/Types/Snowflake.swift; sourceTree = "<group>"; };
+		9BF5AE74243A7F415C12655DC1B7C3DB /* Heartbeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Heartbeat.swift; path = Sources/Sword/Gateway/Heartbeat.swift; sourceTree = "<group>"; };
+		AC65CE10E4621CFAF326D44C5FDCE41B /* Sword.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Sword.modulemap; sourceTree = "<group>"; };
+		AD20E6B47276A3782045BC8555C400EA /* Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = Sources/Sword/Utils/Enums.swift; sourceTree = "<group>"; };
+		B5945617E4488BBEB54DCD8634055247 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68BC56AFA093997EC5F42CDD5F077DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7F44A48B7BC912EB6DF7BB3994E9EC3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF99E535C3FBA624B0662ED02C783BBA /* GuildText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GuildText.swift; path = Sources/Sword/Types/GuildText.swift; sourceTree = "<group>"; };
+		C06C27B11040C2948A69717BA3742FFA /* Bucket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bucket.swift; path = Sources/Sword/Utils/Bucket.swift; sourceTree = "<group>"; };
+		C1BE7EF2F4F6B3BD5AEB2E743044D62A /* Message.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Sources/Sword/Types/Message.swift; sourceTree = "<group>"; };
+		C4428F03A873027B19C5CB18C65D13D3 /* AuditLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuditLog.swift; path = Sources/Sword/Types/AuditLog.swift; sourceTree = "<group>"; };
+		CA78498433AA765CAB32C5A0186F41E7 /* Sword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Sword.framework; path = Sword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46802AFA110FC366444012EB65F7D46 /* Gateway.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gateway.swift; path = Sources/Sword/Gateway/Gateway.swift; sourceTree = "<group>"; };
+		D8497ADDBDA8F88F646EECE481603683 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
+		DFF3F74050B01283983450938ECF57E6 /* Pods-SwordBot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwordBot-dummy.m"; sourceTree = "<group>"; };
+		E0DDC4DD366BA47FC0F30B848DA5752D /* Command.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Command.swift; path = Sources/Sword/Shield/Command.swift; sourceTree = "<group>"; };
+		E2448536C0CDE53628C996E4AE7B39F9 /* Sword-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Sword-umbrella.h"; sourceTree = "<group>"; };
+		EC563F07A7762C0C373DBDE02D9C268F /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/Sword/Utils/Options.swift; sourceTree = "<group>"; };
+		ECF005DE185AA435B45770605CE23BC5 /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/Sword/Utils/Updatable.swift; sourceTree = "<group>"; };
+		F156457B50DFC6D656482D2C51F422D7 /* Channel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = Sources/Sword/Types/Channel.swift; sourceTree = "<group>"; };
+		F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F3912B3D6A79CA457614D27FF743EACB /* Sword.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sword.swift; path = Sources/Sword/Sword.swift; sourceTree = "<group>"; };
+		F3CA0310E83437E8D5699D8E87C404BB /* Endpoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Endpoints.swift; path = Sources/Sword/Rest/Endpoints.swift; sourceTree = "<group>"; };
+		F4EB519CE4B7A82386F45FCD68392235 /* Permissions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Permissions.swift; path = Sources/Sword/Shield/Permissions.swift; sourceTree = "<group>"; };
+		F50AB7FBE25426F505EB7C21077EE674 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Starscream.modulemap; sourceTree = "<group>"; };
+		F813F4C09EB1FC04EC9CA01E35127696 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Sources/Sword/Utils/Log.swift; sourceTree = "<group>"; };
+		FCEB49743AB1440AC5A12F3641BAFE11 /* GuildCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GuildCategory.swift; path = Sources/Sword/Types/GuildCategory.swift; sourceTree = "<group>"; };
+		FF742AA74052969DB80D3B4E7BA6B23E /* ShardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShardManager.swift; path = Sources/Sword/Gateway/ShardManager.swift; sourceTree = "<group>"; };
+		FFE208E6A772003113B5479A4B9B96B4 /* Pods-SwordBot.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwordBot.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CB802317DDD3A0C8CA1182A6406EF71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DCF052FD8C1859BEEA53A2DA712CCFF /* Foundation.framework in Frameworks */,
+				F737E8F4140DB1A7DEBF9E410D7B96B3 /* Starscream.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AF1497632A709AA5AF0198096EC942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7F3CF070F0BDEFD80F79FC0966C3674 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02455B9742D37C8E87A018D9C71E7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94447398E4AB2E3FB41B2C84899A4821 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0878DB140B77A246CD85750EC0D0E7E4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7F44A48B7BC912EB6DF7BB3994E9EC3 /* Info.plist */,
+				AC65CE10E4621CFAF326D44C5FDCE41B /* Sword.modulemap */,
+				367B3510B3DB99C25EF0631EC2D88F5F /* Sword.xcconfig */,
+				950014D7CE6631D7F5D8A91AE6D7A8EB /* Sword-dummy.m */,
+				7D19E8B076DA1914DFFBB1EFC151ED57 /* Sword-prefix.pch */,
+				E2448536C0CDE53628C996E4AE7B39F9 /* Sword-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Sword";
+			sourceTree = "<group>";
+		};
+		163943CA069471FACD6C3CAA25F05B02 /* Pods-SwordBot */ = {
+			isa = PBXGroup;
+			children = (
+				2F9194B22BC0C262D374852E221E7A0B /* Info.plist */,
+				FFE208E6A772003113B5479A4B9B96B4 /* Pods-SwordBot.modulemap */,
+				637941EF849EA44A1A081142F6D15428 /* Pods-SwordBot-acknowledgements.markdown */,
+				06A1FD9B3A203ED0733E477DE833D02A /* Pods-SwordBot-acknowledgements.plist */,
+				DFF3F74050B01283983450938ECF57E6 /* Pods-SwordBot-dummy.m */,
+				80F560AD054C514549C3C75A740CE376 /* Pods-SwordBot-frameworks.sh */,
+				93E4D5E533095AF7072AA38395B3C9D9 /* Pods-SwordBot-resources.sh */,
+				16E41520E50F0369566D44EBA2E36DF7 /* Pods-SwordBot-umbrella.h */,
+				3116E7E496F250DC747D5AD6DB054D1B /* Pods-SwordBot.debug.xcconfig */,
+				4A7A857B85790AAB6DB8E449FA513172 /* Pods-SwordBot.release.xcconfig */,
+			);
+			name = "Pods-SwordBot";
+			path = "Target Support Files/Pods-SwordBot";
+			sourceTree = "<group>";
+		};
+		2975671CCF672B26A0482BAC78209CC8 /* Starscream */ = {
+			isa = PBXGroup;
+			children = (
+				50F2BCE1779FDFF0A74A9F63049B672A /* Compression.swift */,
+				68DD848071EADA556BB34A69AD2CC832 /* SSLSecurity.swift */,
+				0B39444865127B4D2FA603BB64F780E7 /* WebSocket.swift */,
+				EFD999E43A933C0690199A47C3A144AE /* Support Files */,
+			);
+			name = Starscream;
+			path = Starscream;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				C6C6CF85326A60B112CC4A77BAD281D7 /* Frameworks */,
+				E9EA83A21F0412D9CFFCF03AEEF102BD /* Pods */,
+				BDCF7C984B7E346B93E4F5165760DC53 /* Products */,
+				DF924369485928E7D3A118D0060053E6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BDCF7C984B7E346B93E4F5165760DC53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242DA4F1B2330BC8114880DDE895419B /* Pods_SwordBot.framework */,
+				B5945617E4488BBEB54DCD8634055247 /* Starscream.framework */,
+				CA78498433AA765CAB32C5A0186F41E7 /* Sword.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6C6CF85326A60B112CC4A77BAD281D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F52249DD4D3DD3159B64A42F2E7349B /* Starscream.framework */,
+				F73D217E75B288FCF69E835DC1DD524A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD6B1E5387ECB01175D4C3C500AEF9D9 /* Sword */ = {
+			isa = PBXGroup;
+			children = (
+				C4428F03A873027B19C5CB18C65D13D3 /* AuditLog.swift */,
+				C06C27B11040C2948A69717BA3742FFA /* Bucket.swift */,
+				F156457B50DFC6D656482D2C51F422D7 /* Channel.swift */,
+				E0DDC4DD366BA47FC0F30B848DA5752D /* Command.swift */,
+				639B11F88D5FB0101D26F7616AD4ED2B /* DM.swift */,
+				3A192D486B4028F8685510279212831B /* Emoji.swift */,
+				3696DB7BFB51EDE0242043D23BFE86AB /* EndpointInfo.swift */,
+				F3CA0310E83437E8D5699D8E87C404BB /* Endpoints.swift */,
+				AD20E6B47276A3782045BC8555C400EA /* Enums.swift */,
+				5F330CC2D049E7DBEE19B1AF45DACFEC /* Error.swift */,
+				6E440EB0BAF6A7CD8DFB7455D883FA80 /* Eventable.swift */,
+				3FC65EB41B89729983737FCDD90C5526 /* EventHandler.swift */,
+				D46802AFA110FC366444012EB65F7D46 /* Gateway.swift */,
+				65B6EF455ECF4C245FDDE7FD2482F366 /* GatewayHandler.swift */,
+				92724E62B6F86B6EE08B2ED03C90A58D /* GroupDM.swift */,
+				6F7825DB04E5F3F7A762B36693B4C37C /* Guild.swift */,
+				FCEB49743AB1440AC5A12F3641BAFE11 /* GuildCategory.swift */,
+				BF99E535C3FBA624B0662ED02C783BBA /* GuildText.swift */,
+				5287FBFA798D422C0C777D385CFD9B5E /* GuildVoice.swift */,
+				9BF5AE74243A7F415C12655DC1B7C3DB /* Heartbeat.swift */,
+				1EC08E4CC5F6826429F16D0E89BC5028 /* Invite.swift */,
+				4CFB7354FB5E5B2ABC19D4342317DA8F /* JSON.swift */,
+				F813F4C09EB1FC04EC9CA01E35127696 /* Log.swift */,
+				508C8B1BCF7E904ADE3C12F1DE1E0F79 /* Member.swift */,
+				C1BE7EF2F4F6B3BD5AEB2E743044D62A /* Message.swift */,
+				64A4F05364246EFAEB91C39365B0A07F /* MultipartBody.swift */,
+				EC563F07A7762C0C373DBDE02D9C268F /* Options.swift */,
+				47264EFF2309CB6F375EA1C1B2387170 /* Payload.swift */,
+				F4EB519CE4B7A82386F45FCD68392235 /* Permissions.swift */,
+				18452004EB2333AA9DE7E1EE37559DB8 /* RateLimit.swift */,
+				0FF46467D08CDDE5A39DEE53E242D5D8 /* Request.swift */,
+				35FF2A94EA2D2B0593F2184AA761629A /* Role.swift */,
+				5AC86622F637817E2199D92FB8EDAA8E /* Shard.swift */,
+				FF742AA74052969DB80D3B4E7BA6B23E /* ShardManager.swift */,
+				11107C521FDC337A82964310D90D7327 /* Shield.swift */,
+				953C16A0369BAF8100F3A3493483F264 /* Snowflake.swift */,
+				F3912B3D6A79CA457614D27FF743EACB /* Sword.swift */,
+				ECF005DE185AA435B45770605CE23BC5 /* Updatable.swift */,
+				5601147A9F19E3DDBE45E16E4BEA498C /* User.swift */,
+				7FB1557E16EEB03DF76FAA8495BED408 /* Utils.swift */,
+				8BE92E41C058B70E6AB30587439A3A2F /* VoiceState.swift */,
+				63BD95498D43C0B496647F11BAC902A7 /* Webhook.swift */,
+				0878DB140B77A246CD85750EC0D0E7E4 /* Support Files */,
+			);
+			name = Sword;
+			path = Sword;
+			sourceTree = "<group>";
+		};
+		DF924369485928E7D3A118D0060053E6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				163943CA069471FACD6C3CAA25F05B02 /* Pods-SwordBot */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E9EA83A21F0412D9CFFCF03AEEF102BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2975671CCF672B26A0482BAC78209CC8 /* Starscream */,
+				CD6B1E5387ECB01175D4C3C500AEF9D9 /* Sword */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EFD999E43A933C0690199A47C3A144AE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B68BC56AFA093997EC5F42CDD5F077DF /* Info.plist */,
+				F50AB7FBE25426F505EB7C21077EE674 /* Starscream.modulemap */,
+				03032BBB9A2882D961D20380F8321EEE /* Starscream.xcconfig */,
+				D8497ADDBDA8F88F646EECE481603683 /* Starscream-dummy.m */,
+				2262A42C80CE81AD435E8561B2E78BAC /* Starscream-prefix.pch */,
+				93A45F35A05665786F94422584C4F809 /* Starscream-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Starscream";
+			sourceTree = "<group>";
+		};
+		F73D217E75B288FCF69E835DC1DD524A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		404047E2C308E5752365F754DD4C69FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657A46CDB510658568FD087B3E804319 /* Pods-SwordBot-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		760174A12AEFFC32D8EA11B3EE6ABE43 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0DB89D84C316EF1851F9061591CE719 /* Starscream-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F83624F70E185770C5F7084D808D117 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C73B8A97065099D7D0791A20B095F4A /* Sword-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		22E963232704A9F8DA25951A4FE99239 /* Sword */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072B3AA19442EFE9CA14380C0154155C /* Build configuration list for PBXNativeTarget "Sword" */;
+			buildPhases = (
+				7F83624F70E185770C5F7084D808D117 /* Headers */,
+				BAF3CC6EC8CEF02B0FB6D3A8F78FC02F /* Sources */,
+				2CB802317DDD3A0C8CA1182A6406EF71 /* Frameworks */,
+				790B8645D0088F31E2D39460699BDCC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				527DDB30679E798763CD853ED1A9D73D /* PBXTargetDependency */,
+			);
+			name = Sword;
+			productName = Sword;
+			productReference = CA78498433AA765CAB32C5A0186F41E7 /* Sword.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A11585F1C332BB430B4DD598A53F4DC6 /* Pods-SwordBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8C987EBFD8249B925BBC29C78381482 /* Build configuration list for PBXNativeTarget "Pods-SwordBot" */;
+			buildPhases = (
+				404047E2C308E5752365F754DD4C69FA /* Headers */,
+				8FFFAD159697752AEDCA97EB43037E2D /* Sources */,
+				48AF1497632A709AA5AF0198096EC942 /* Frameworks */,
+				0CFF244714FF8AE4934297A66D75C5DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6C2E5E0718D23B9C7AE1B7D4518034A /* PBXTargetDependency */,
+				D4DC214E3F6DB050881CD3420A63913C /* PBXTargetDependency */,
+			);
+			name = "Pods-SwordBot";
+			productName = "Pods-SwordBot";
+			productReference = 242DA4F1B2330BC8114880DDE895419B /* Pods_SwordBot.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BCD87E6113E422749F366D01A960CC4B /* Starscream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3727D9C328FFE842270FFD952A0802 /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildPhases = (
+				760174A12AEFFC32D8EA11B3EE6ABE43 /* Headers */,
+				ECFECDB59AFE55E917729BDE0CC0827A /* Sources */,
+				E02455B9742D37C8E87A018D9C71E7DB /* Frameworks */,
+				FBE4DDFF1F16DF8555B5370921C3F81E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Starscream;
+			productName = Starscream;
+			productReference = B5945617E4488BBEB54DCD8634055247 /* Starscream.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BDCF7C984B7E346B93E4F5165760DC53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A11585F1C332BB430B4DD598A53F4DC6 /* Pods-SwordBot */,
+				BCD87E6113E422749F366D01A960CC4B /* Starscream */,
+				22E963232704A9F8DA25951A4FE99239 /* Sword */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CFF244714FF8AE4934297A66D75C5DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790B8645D0088F31E2D39460699BDCC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBE4DDFF1F16DF8555B5370921C3F81E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FFFAD159697752AEDCA97EB43037E2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1BCDF35BCEDA19E57D40422279D5552 /* Pods-SwordBot-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF3CC6EC8CEF02B0FB6D3A8F78FC02F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED506431BBFAF203A775433B0120F6AF /* AuditLog.swift in Sources */,
+				18EA599E188D6B5932C9BB10166E7E15 /* Bucket.swift in Sources */,
+				54C081C02924BC8F4294A56B70E91228 /* Channel.swift in Sources */,
+				302896C0A71B955389A719639ED40607 /* Command.swift in Sources */,
+				393501FE11DE5ED817613A335C597437 /* DM.swift in Sources */,
+				DD385376D08DD3385273653EAA5E568A /* Emoji.swift in Sources */,
+				EEFF7A03FCE2F497444955D23231500D /* EndpointInfo.swift in Sources */,
+				06FD023A37F432882546C124F67BE20D /* Endpoints.swift in Sources */,
+				0BF13B1D2A218929708C1B8F8D039D83 /* Enums.swift in Sources */,
+				C60E1CB53E1E8CD1FB0286045B5BB81F /* Error.swift in Sources */,
+				0BA72675BAC6EA9A1E924C3789E49328 /* Eventable.swift in Sources */,
+				8440966A3BB637835C4BE828AC94E7F5 /* EventHandler.swift in Sources */,
+				5115377263265D751196BEEBC50A6734 /* Gateway.swift in Sources */,
+				5624F962EA3E4ABFF69C0199E48B31E4 /* GatewayHandler.swift in Sources */,
+				066DCC8EABC082024B469058B70BDC20 /* GroupDM.swift in Sources */,
+				E5D7CA660A48DE0C8524DDB56D41C452 /* Guild.swift in Sources */,
+				FF1C17D92FE8B59C1FEBD14A2F26B38E /* GuildCategory.swift in Sources */,
+				7E7C8690C175D00F0D968CD3E73076AE /* GuildText.swift in Sources */,
+				84E3AF89D783898C3A86EB00AC344871 /* GuildVoice.swift in Sources */,
+				99E85FB5941D3A87F880DB16446EC28E /* Heartbeat.swift in Sources */,
+				0B67341722B05A742AFA2FE76100CDCB /* Invite.swift in Sources */,
+				1306EE5E7AC782394989CD4D14BAF038 /* JSON.swift in Sources */,
+				03C9896D34737A3856CB3CF23C2647BC /* Log.swift in Sources */,
+				F0A8725594EF9AE930FBF9A665184867 /* Member.swift in Sources */,
+				6CEE41BBC3E49BD62A408C7EEE6EF8C2 /* Message.swift in Sources */,
+				A21F5A6DD4D0CE920E3C2004ECB69D8F /* MultipartBody.swift in Sources */,
+				30EBF0FD141CD84DD251F8A4C89F560A /* Options.swift in Sources */,
+				FE4D84F8A22E54B0900865D4C46DB27E /* Payload.swift in Sources */,
+				07D6154C2346D317D97A3EAD8001FCF6 /* Permissions.swift in Sources */,
+				17D566140712D5F87D40782C83BDD99A /* RateLimit.swift in Sources */,
+				A1BA6935A668B94072946C617736F8ED /* Request.swift in Sources */,
+				9B5CED4C140A036C05C00046E280334B /* Role.swift in Sources */,
+				F1F4E2B12507EC1719D9836F4E7A0EAA /* Shard.swift in Sources */,
+				5A360A0415D4F1E030F03B9EDDFF7FC3 /* ShardManager.swift in Sources */,
+				E7965DA31E454EC26F677D365ED8A5EF /* Shield.swift in Sources */,
+				07883CA7B384C9AFEDD888CD9143154C /* Snowflake.swift in Sources */,
+				7820BBC94D580CA30E0681627D7749B1 /* Sword-dummy.m in Sources */,
+				CDDF0C8369DA98CB8348A1D013CDBBB5 /* Sword.swift in Sources */,
+				A7186B7605FC04A7E5B529D9AD5CE28B /* Updatable.swift in Sources */,
+				3DE33D3FDF73445CF071DDEB0895717B /* User.swift in Sources */,
+				5AAB06F2C067B2F9ADBF0D3DD62AF79D /* Utils.swift in Sources */,
+				6D92C331FEB46F7C36070A67EC96D16B /* VoiceState.swift in Sources */,
+				442FB5AE32386B67A2AD43521F2E1036 /* Webhook.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFECDB59AFE55E917729BDE0CC0827A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC21B83D4743FD7988ABF5A4C6BA4EB9 /* Compression.swift in Sources */,
+				78620511131FB7FE3B44B886D1575A6F /* SSLSecurity.swift in Sources */,
+				F19F8230EAD1ECAC38A5E1AD711A7B00 /* Starscream-dummy.m in Sources */,
+				BB0E32D9F55115DDDC5B7BD6445DD4B1 /* WebSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		527DDB30679E798763CD853ED1A9D73D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = BCD87E6113E422749F366D01A960CC4B /* Starscream */;
+			targetProxy = FEFB69BDE8AF0C53295CD14AEA95062C /* PBXContainerItemProxy */;
+		};
+		A6C2E5E0718D23B9C7AE1B7D4518034A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = BCD87E6113E422749F366D01A960CC4B /* Starscream */;
+			targetProxy = 30BE990EE588C6E0BAF683C5D7DE7EC4 /* PBXContainerItemProxy */;
+		};
+		D4DC214E3F6DB050881CD3420A63913C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Sword;
+			target = 22E963232704A9F8DA25951A4FE99239 /* Sword */;
+			targetProxy = B552D98E9FC0F36C1892C8240F5C864B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		095E493BA9C2CE2A4C1D48E7F8B18D15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03032BBB9A2882D961D20380F8321EEE /* Starscream.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		229CE58050670774FE050355AA753D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03032BBB9A2882D961D20380F8321EEE /* Starscream.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		829BDC6C7C6A4B8F3C305760597AA3B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 367B3510B3DB99C25EF0631EC2D88F5F /* Sword.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Sword/Sword-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Sword/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Sword/Sword.modulemap";
+				PRODUCT_MODULE_NAME = Sword;
+				PRODUCT_NAME = Sword;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		90801340DB97DA2D6643DE3ECC36F95F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A610193BC95AA1FBE8D125DF9AD72C9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A7B75BFE478B3F8C9367771AFFD3340C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A7A857B85790AAB6DB8E449FA513172 /* Pods-SwordBot.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwordBot/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwordBot/Pods-SwordBot.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7583B67CA0F00526BA089F503DC694A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3116E7E496F250DC747D5AD6DB054D1B /* Pods-SwordBot.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwordBot/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwordBot/Pods-SwordBot.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E36251E61D8AF147E69DB0E0DBA1C0D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 367B3510B3DB99C25EF0631EC2D88F5F /* Sword.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Sword/Sword-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Sword/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Sword/Sword.modulemap";
+				PRODUCT_MODULE_NAME = Sword;
+				PRODUCT_NAME = Sword;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		072B3AA19442EFE9CA14380C0154155C /* Build configuration list for PBXNativeTarget "Sword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E36251E61D8AF147E69DB0E0DBA1C0D3 /* Debug */,
+				829BDC6C7C6A4B8F3C305760597AA3B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A610193BC95AA1FBE8D125DF9AD72C9D /* Debug */,
+				90801340DB97DA2D6643DE3ECC36F95F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8C987EBFD8249B925BBC29C78381482 /* Build configuration list for PBXNativeTarget "Pods-SwordBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7583B67CA0F00526BA089F503DC694A /* Debug */,
+				A7B75BFE478B3F8C9367771AFFD3340C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3727D9C328FFE842270FFD952A0802 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095E493BA9C2CE2A4C1D48E7F8B18D15 /* Debug */,
+				229CE58050670774FE050355AA753D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
