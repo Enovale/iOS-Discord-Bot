@@ -123,7 +123,7 @@ class FirstViewController: UIViewController {
     
     func StartBot() {
         //task.startBackgroundTask()
-        NSLog(Token.token)
+        print(Token.token)
         Bot.bot?.editStatus(to: "online", playing: "with Sword!")
         
         Bot.bot?.on(.ready) { data in
@@ -158,6 +158,21 @@ class FirstViewController: UIViewController {
         }
         
         Bot.bot?.connect()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
+    @IBAction func deselectField(_ sender: UITextField) {
+        sender.resignFirstResponder()
+        Bot.bot?.editStatus(to: "online", playing: sender.text!)
+    }
+    
+    @IBAction func changedPlay(_ sender: UITextField) {
+        Logs.logs += "Changed play status to " + sender.text! + "\n"
+        Bot.bot?.editStatus(to: "online", playing: sender.text!)
     }
     
     @IBAction func StopButton(_ sender: UIButton) {
