@@ -10,28 +10,13 @@ import UIKit
 import Sword
 import AVFoundation
 
-struct Token {
-    static var token = ""
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var file = "token.txt"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            
-            let fileURL = dir.appendingPathComponent(file)
-            
-            //reading
-            do {
-                Token.token = try String(contentsOf: fileURL, encoding: .utf8)
-            }
-            catch {/* error handling here */}
-        }
         return true
     }
 
@@ -55,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        Bot.bot.disconnect()
+        Bot.bot?.disconnect()
     }
 
 

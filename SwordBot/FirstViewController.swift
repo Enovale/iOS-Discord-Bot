@@ -15,9 +15,13 @@ struct Logs {
     static var logs = ""
 }
 
+struct Token {
+    static var token = ""
+}
+
 struct Bot {
-    static var bot = Sword(token: Token.token)
-    static var shield = Shield(token: Token.token)
+    static var bot: Sword? = nil
+    static var shield: Shield? = nil
 }
 
 struct Settings {
@@ -35,6 +39,7 @@ class FirstViewController: UIViewController {
     var isAudioPlayerPlaying = false
     var view2 = SecondViewController()
     var botStarted = false
+    var token = ""
     
     var player:AVAudioPlayer = AVAudioPlayer()
     
@@ -59,6 +64,7 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initBot()
         do {
             // Offline Code:
             let audioPath = Bundle.main.path(forResource: "song", ofType: "mp3")
@@ -78,6 +84,23 @@ class FirstViewController: UIViewController {
         catch{
             
         }
+    }
+    
+    func initBot() {
+        if let filepath = Bundle.main.path(forResource: "token", ofType: "txt") {
+            do {
+                token = try String(contentsOfFile: filepath).replacingOccurrences(of: "\n", with: "")
+                print(token)
+            } catch {
+                // contents could not be loaded
+                print("Couldn't load token")
+            }
+        } else {
+            // example.txt not found!
+            print("token file not found")
+        }
+        Bot.bot = Sword(token: token)
+        Bot.shield = Shield(token: token)
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,24 +123,26 @@ class FirstViewController: UIViewController {
     
     func StartBot() {
         //task.startBackgroundTask()
-        Bot.bot.editStatus(to: "online", playing: "with Sword!")
+        NSLog(Token.token)
+        Bot.bot?.editStatus(to: "online", playing: "with Sword!")
         
-        Bot.bot.on(.ready) { data in
+        Bot.bot?.on(.ready) { data in
             self.botStarted = true
             Logs.logs = "Bot Ready\n"
             self.statusLabel.text = "Bot running"
+            print("Bot started!")
         }
         
-        Bot.bot.on(.disconnect) { data in
+        Bot.bot?.on(.disconnect) { data in
             Logs.logs += "\nBot shut down."
             self.statusLabel.text = "Bot offline"
             self.botStarted = false
         }
         
-        Bot.bot.on(.messageCreate) { data in
+        Bot.bot?.on(.messageCreate) { data in
             let msg = data as! Message
             
-            if(msg.content.hasPrefix("!") || msg.author?.id == Bot.bot.user?.id || Settings.chatLog == true) {
+            if(msg.content.hasPrefix("!") || msg.author?.id == Bot.bot?.user?.id || Settings.chatLog == true) {
                 Logs.logs += (msg.author?.username)! + ": " + msg.content + "\n"
             }
             
@@ -126,20 +151,20 @@ class FirstViewController: UIViewController {
             }
         }
         
-        Bot.shield.register("yeet") { msg, args in
+        Bot.shield?.register("yeet") { msg, args in
             if(args[0] != "") {
                 msg.reply(with: args[0] + "got yeeted by: " + (msg.author?.username)!)
             }
         }
         
-        Bot.bot.connect()
+        Bot.bot?.connect()
     }
     
     @IBAction func StopButton(_ sender: UIButton) {
         if(botStarted == false) {
             return
         }
-        Bot.bot.disconnect()
+        Bot.bot?.disconnect()
         Logs.logs += "\nBot shut down.\n"
         self.statusLabel.text = "Bot offline"
         self.botStarted = false
