@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF936EF6808DD20008BAB50E /* Pods_SwordBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */; };
+		CF2BB721214A49C600953BE8 /* token.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB720214A49C600953BE8 /* token.txt */; };
 		CFD01A0A2149BD9E00C9936C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD01A092149BD9E00C9936C /* BackgroundTask.swift */; };
 		CFD01A0C2149BDBA00C9936C /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0B2149BDBA00C9936C /* blank.wav */; };
 		CFD01A0E2149F75800C9936C /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0D2149F75800C9936C /* song.mp3 */; };
@@ -44,6 +45,7 @@
 		24C9FBD11D1D05B9739ABDBD /* Pods-SwordBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwordBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot.debug.xcconfig"; sourceTree = "<group>"; };
 		4E43DE2145431AA2CCEFDC3B /* Pods-SwordBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwordBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot.release.xcconfig"; sourceTree = "<group>"; };
 		AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwordBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2BB720214A49C600953BE8 /* token.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = token.txt; sourceTree = "<group>"; };
 		CFD01A092149BD9E00C9936C /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		CFD01A0B2149BDBA00C9936C /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
 		CFD01A0D2149F75800C9936C /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				CFD01A13214A192200C9936C /* squid.jpg */,
 				CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */,
 				CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */,
+				CF2BB720214A49C600953BE8 /* token.txt */,
 				CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */,
 				CFD01A11214A144B00C9936C /* SettingsViewController.swift */,
 				CFD01A092149BD9E00C9936C /* BackgroundTask.swift */,
@@ -281,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2BB721214A49C600953BE8 /* token.txt in Resources */,
 				CFDCBC442148757D00CFFBF8 /* LaunchScreen.storyboard in Resources */,
 				CFD01A0E2149F75800C9936C /* song.mp3 in Resources */,
 				CFD01A0C2149BDBA00C9936C /* blank.wav in Resources */,
