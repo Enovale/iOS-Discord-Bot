@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF936EF6808DD20008BAB50E /* Pods_SwordBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */; };
 		CF2BB721214A49C600953BE8 /* token.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB720214A49C600953BE8 /* token.txt */; };
+		CF2BB725214A4CA500953BE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB724214A4CA400953BE8 /* README.md */; };
 		CFD01A0A2149BD9E00C9936C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD01A092149BD9E00C9936C /* BackgroundTask.swift */; };
 		CFD01A0C2149BDBA00C9936C /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0B2149BDBA00C9936C /* blank.wav */; };
 		CFD01A0E2149F75800C9936C /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0D2149F75800C9936C /* song.mp3 */; };
@@ -46,6 +47,7 @@
 		4E43DE2145431AA2CCEFDC3B /* Pods-SwordBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwordBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot.release.xcconfig"; sourceTree = "<group>"; };
 		AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwordBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2BB720214A49C600953BE8 /* token.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = token.txt; sourceTree = "<group>"; };
+		CF2BB724214A4CA400953BE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		CFD01A092149BD9E00C9936C /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		CFD01A0B2149BDBA00C9936C /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
 		CFD01A0D2149F75800C9936C /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		CFDCBC362148757D00CFFBF8 /* SwordBot */ = {
 			isa = PBXGroup;
 			children = (
+				CF2BB724214A4CA400953BE8 /* README.md */,
 				CFD01A0B2149BDBA00C9936C /* blank.wav */,
 				CFD01A0D2149F75800C9936C /* song.mp3 */,
 				CFD01A13214A192200C9936C /* squid.jpg */,
@@ -290,6 +293,7 @@
 				CFD01A0C2149BDBA00C9936C /* blank.wav in Resources */,
 				CFDCBC412148757D00CFFBF8 /* Assets.xcassets in Resources */,
 				CFDCBC3F2148757D00CFFBF8 /* Main.storyboard in Resources */,
+				CF2BB725214A4CA500953BE8 /* README.md in Resources */,
 				CFD01A14214A192300C9936C /* squid.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
