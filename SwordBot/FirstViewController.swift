@@ -16,8 +16,7 @@ struct Logs {
 }
 
 struct Bot {
-    static var bot = Sword(token: "NDYyOTc5OTUyNjUyOTc2MTI5.DnjI-g.MtHysYL_VQtiFZl4pBElK8Z9wqA")
-    static var shield = Shield(token: "NDYyOTc5OTUyNjUyOTc2MTI5.DnjI-g.MtHysYL_VQtiFZl4pBElK8Z9wqA")
+    
 }
 
 struct Settings {
