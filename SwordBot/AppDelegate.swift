@@ -10,10 +10,15 @@ import UIKit
 import Sword
 import AVFoundation
 
+struct Token {
+    static var token = ""
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var file = "token.txt"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,15 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let fileURL = dir.appendingPathComponent(file)
             
-            //writing
-            do {
-                try text.write(to: fileURL, atomically: false, encoding: .utf8)
-            }
-            catch {/* error handling here */}
-            
             //reading
             do {
-                let text2 = try String(contentsOf: fileURL, encoding: .utf8)
+                Token.token = try String(contentsOf: fileURL, encoding: .utf8)
             }
             catch {/* error handling here */}
         }

@@ -16,8 +16,8 @@ struct Logs {
 }
 
 struct Bot {
-    static var bot = Sword(token: "***REMOVED***")
-    static var shield = Shield(token: "***REMOVED***")
+    static var bot = Sword(token: Token.token)
+    static var shield = Shield(token: Token.token)
 }
 
 struct Settings {

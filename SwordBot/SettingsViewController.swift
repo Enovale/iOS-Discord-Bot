@@ -14,17 +14,17 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleMusic(_ sender: UISwitch) {
         Settings.musicOn = sender.isOn
-        defaults.set("musicOn", forKey: sender.isOn)
+        defaults.set(sender.isOn, forKey: "musicOn")
     }
     
     @IBAction func toggleNotifications(_ sender: UISwitch) {
         Settings.notificationsOn = sender.isOn
-        defaults.set("notificationsOn", forKey: sender.isOn)
+        defaults.set(sender.isOn, forKey: "notificationsOn")
     }
     
     @IBAction func toggleChatLog(_ sender: UISwitch) {
         Settings.chatLog = sender.isOn
-        defaults.set("chatOn", forKey: sender.isOn)
+        defaults.set(sender.isOn, forKey: "chatOn")
     }
     
     override func viewDidLoad() {
