@@ -140,7 +140,7 @@ class FirstViewController: UIViewController {
             return
         }
         Bot.bot.disconnect()
-        Logs.logs += "\nBot shut down."
+        Logs.logs += "\nBot shut down.\n"
         self.statusLabel.text = "Bot offline"
         self.botStarted = false
     }
