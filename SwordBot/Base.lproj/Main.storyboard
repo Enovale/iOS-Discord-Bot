@@ -61,6 +61,17 @@
                                 <rect key="frame" x="87" y="81" width="240" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Playing Status" minimumFontSize="17" background="borderbg" disabledBackground="borderbg" translatesAutoresizingMaskIntoConstraints="NO" id="zMx-ve-bAi">
+                                <rect key="frame" x="87" y="295" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="changedPlay:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="cpD-6u-S8e"/>
+                                    <action selector="deselectField:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="HPK-Bt-qTi"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
