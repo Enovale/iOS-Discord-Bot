@@ -67,7 +67,7 @@ class FirstViewController: UIViewController {
         initBot()
         do {
             // Offline Code:
-            let audioPath = Bundle.main.path(forResource: "song", ofType: "mp3")
+            let audioPath = Bundle.main.path(forResource: "blank", ofType: "wav")
             
             try player = AVAudioPlayer(contentsOf: NSURL (fileURLWithPath: audioPath!)as URL);
             player.numberOfLoops = -1
@@ -183,6 +183,7 @@ class FirstViewController: UIViewController {
         Logs.logs += "\nBot shut down.\n"
         self.statusLabel.text = "Bot offline"
         self.botStarted = false
+        player.stop()
     }
     
     

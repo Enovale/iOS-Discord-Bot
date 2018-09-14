@@ -10,8 +10,12 @@
 		AF936EF6808DD20008BAB50E /* Pods_SwordBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */; };
 		CF2BB721214A49C600953BE8 /* token.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB720214A49C600953BE8 /* token.txt */; };
 		CF2BB725214A4CA500953BE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB724214A4CA400953BE8 /* README.md */; };
+		CFC4DFE2214B6C9B0053DC9B /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE1214B6C9B0053DC9B /* blank.wav */; };
+		CFC4DFE4214B6F5C0053DC9B /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE3214B6F5B0053DC9B /* settings.png */; };
+		CFC4DFE6214B70A40053DC9B /* logs.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE5214B70A40053DC9B /* logs.png */; };
+		CFC4DFE8214B711A0053DC9B /* controls.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE7214B711A0053DC9B /* controls.png */; };
+		CFC4DFEA214B71EE0053DC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE9214B71EE0053DC9B /* Assets.xcassets */; };
 		CFD01A0A2149BD9E00C9936C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD01A092149BD9E00C9936C /* BackgroundTask.swift */; };
-		CFD01A0C2149BDBA00C9936C /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0B2149BDBA00C9936C /* blank.wav */; };
 		CFD01A0E2149F75800C9936C /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0D2149F75800C9936C /* song.mp3 */; };
 		CFD01A12214A144B00C9936C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD01A11214A144B00C9936C /* SettingsViewController.swift */; };
 		CFD01A14214A192300C9936C /* squid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A13214A192200C9936C /* squid.jpg */; };
@@ -19,7 +23,6 @@
 		CFDCBC3A2148757D00CFFBF8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */; };
 		CFDCBC3C2148757D00CFFBF8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */; };
 		CFDCBC3F2148757D00CFFBF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDCBC3D2148757D00CFFBF8 /* Main.storyboard */; };
-		CFDCBC412148757D00CFFBF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDCBC402148757D00CFFBF8 /* Assets.xcassets */; };
 		CFDCBC442148757D00CFFBF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDCBC422148757D00CFFBF8 /* LaunchScreen.storyboard */; };
 		CFDCBC4F2148757D00CFFBF8 /* SwordBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC4E2148757D00CFFBF8 /* SwordBotTests.swift */; };
 		CFDCBC5A2148757D00CFFBF8 /* SwordBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCBC592148757D00CFFBF8 /* SwordBotUITests.swift */; };
@@ -48,8 +51,12 @@
 		AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwordBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2BB720214A49C600953BE8 /* token.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = token.txt; sourceTree = "<group>"; };
 		CF2BB724214A4CA400953BE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		CFC4DFE1214B6C9B0053DC9B /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
+		CFC4DFE3214B6F5B0053DC9B /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		CFC4DFE5214B70A40053DC9B /* logs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logs.png; sourceTree = "<group>"; };
+		CFC4DFE7214B711A0053DC9B /* controls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls.png; sourceTree = "<group>"; };
+		CFC4DFE9214B71EE0053DC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFD01A092149BD9E00C9936C /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
-		CFD01A0B2149BDBA00C9936C /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
 		CFD01A0D2149F75800C9936C /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		CFD01A11214A144B00C9936C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CFD01A13214A192200C9936C /* squid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = squid.jpg; sourceTree = "<group>"; };
@@ -58,7 +65,6 @@
 		CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CFDCBC3E2148757D00CFFBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CFDCBC402148757D00CFFBF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFDCBC432148757D00CFFBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFDCBC452148757D00CFFBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFDCBC4A2148757D00CFFBF8 /* SwordBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwordBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				CF2BB724214A4CA400953BE8 /* README.md */,
-				CFD01A0B2149BDBA00C9936C /* blank.wav */,
+				CFC4DFE5214B70A40053DC9B /* logs.png */,
+				CFC4DFE7214B711A0053DC9B /* controls.png */,
+				CFC4DFE3214B6F5B0053DC9B /* settings.png */,
+				CFC4DFE1214B6C9B0053DC9B /* blank.wav */,
 				CFD01A0D2149F75800C9936C /* song.mp3 */,
 				CFD01A13214A192200C9936C /* squid.jpg */,
 				CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */,
@@ -139,7 +148,7 @@
 				CFD01A11214A144B00C9936C /* SettingsViewController.swift */,
 				CFD01A092149BD9E00C9936C /* BackgroundTask.swift */,
 				CFDCBC3D2148757D00CFFBF8 /* Main.storyboard */,
-				CFDCBC402148757D00CFFBF8 /* Assets.xcassets */,
+				CFC4DFE9214B71EE0053DC9B /* Assets.xcassets */,
 				CFDCBC422148757D00CFFBF8 /* LaunchScreen.storyboard */,
 				CFDCBC452148757D00CFFBF8 /* Info.plist */,
 			);
@@ -289,10 +298,13 @@
 			files = (
 				CF2BB721214A49C600953BE8 /* token.txt in Resources */,
 				CFDCBC442148757D00CFFBF8 /* LaunchScreen.storyboard in Resources */,
+				CFC4DFEA214B71EE0053DC9B /* Assets.xcassets in Resources */,
 				CFD01A0E2149F75800C9936C /* song.mp3 in Resources */,
-				CFD01A0C2149BDBA00C9936C /* blank.wav in Resources */,
-				CFDCBC412148757D00CFFBF8 /* Assets.xcassets in Resources */,
+				CFC4DFE8214B711A0053DC9B /* controls.png in Resources */,
 				CFDCBC3F2148757D00CFFBF8 /* Main.storyboard in Resources */,
+				CFC4DFE2214B6C9B0053DC9B /* blank.wav in Resources */,
+				CFC4DFE6214B70A40053DC9B /* logs.png in Resources */,
+				CFC4DFE4214B6F5C0053DC9B /* settings.png in Resources */,
 				CF2BB725214A4CA500953BE8 /* README.md in Resources */,
 				CFD01A14214A192300C9936C /* squid.jpg in Resources */,
 			);
