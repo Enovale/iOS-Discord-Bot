@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
     @IBOutlet public weak var LogObject: UITextView!
     
     private var timer: Timer?
@@ -25,7 +25,7 @@ class SecondViewController: UIViewController {
     @objc func logUpdate() {
         self.UpdateLogs()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

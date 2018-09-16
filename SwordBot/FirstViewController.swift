@@ -16,10 +16,6 @@ struct Logs {
     static var logs = ""
 }
 
-struct Token {
-    static var token = ""
-}
-
 struct Bot {
     static var bot: Shield? = nil
     static var guilds: [Guild]? = []
@@ -31,6 +27,9 @@ struct Settings {
     static var notificationsOn = true
     static var chatLog = false
     static var autoStart = false
+    static var token = ""
+    static var showToken = false
+    static var prefix = "!"
 }
 
 class FirstViewController: UIViewController {
@@ -42,7 +41,6 @@ class FirstViewController: UIViewController {
     var isAudioPlayerPlaying = false
     var view2 = SecondViewController()
     var botStarted = false
-    var token = ""
     let defaults = UserDefaults.standard
     
     var player:AVAudioPlayer = AVAudioPlayer()
@@ -67,7 +65,7 @@ class FirstViewController: UIViewController {
         //Replay Logic
         player.currentTime = 0;
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initBot()
@@ -97,61 +95,125 @@ class FirstViewController: UIViewController {
     }
     
     func UpdateSettings() {
-        let musicBool = defaults.object(forKey:"musicOn") as? Bool
-        let notificationsBool = defaults.object(forKey:"notificationsOn") as? Bool
-        let chatLogBool = defaults.object(forKey:"chatOn") as? Bool
-        let autoStartBool = defaults.object(forKey:"autoStartOn") as? Bool
+        var musicBool = defaults.object(forKey:"musicOn") as? Bool
+        var notificationsBool = defaults.object(forKey:"notificationsOn") as? Bool
+        var chatLogBool = defaults.object(forKey:"chatOn") as? Bool
+        var autoStartBool = defaults.object(forKey:"autoStartOn") as? Bool
+        var prefixString = defaults.string(forKey: "prefix")
+        if musicBool == nil {
+            musicBool = Settings.musicOn
+        }
+        if notificationsBool == nil {
+            notificationsBool = Settings.notificationsOn
+        }
+        if chatLogBool == nil {
+            chatLogBool = Settings.chatLog
+        }
+        if autoStartBool == nil {
+            autoStartBool = Settings.autoStart
+        }
+        if prefixString == nil {
+            prefixString = Settings.prefix
+        }
         Settings.musicOn = musicBool!
         Settings.notificationsOn = notificationsBool!
         Settings.chatLog = chatLogBool!
         Settings.autoStart = autoStartBool!
+        Settings.prefix = prefixString!
     }
     
     func initBot() {
+        var settingsToken = ""
+        if defaults.string(forKey: "token") != nil {
+            settingsToken = defaults.string(forKey: "token")!
+        }
         if let filepath = Bundle.main.path(forResource: "token", ofType: "txt") {
             do {
-                token = try String(contentsOfFile: filepath).replacingOccurrences(of: "\n", with: "")
-                print(token)
+                Settings.token = try String(contentsOfFile: filepath).replacingOccurrences(of: "\n", with: "")
+                if settingsToken == "" {
+                    defaults.set(Settings.token, forKey: "token")
+                }
+                print(Settings.token)
             } catch {
                 // contents could not be loaded
-                print("Couldn't load token")
+                print("Couldn't load Settings.token")
             }
         } else {
             // example.txt not found!
             print("token file not found")
+            if settingsToken != "" {
+                Settings.token = settingsToken
+            }
         }
         //Bot.bot = Sword(token: token)
-        var shieldOptions = ShieldOptions()
-        var swordOptions = SwordOptions()
-        shieldOptions.prefixes = ["!"]
-        shieldOptions.willDefaultHelp = true
-        swordOptions.isBot = true
-        swordOptions.willLog = true
-        Bot.bot = Shield(token: token, with: swordOptions, and: shieldOptions)
+        if (Settings.token == "") {
+            let alert = UIAlertController(title: "No token loaded!", message: "The bot can't start until you give it your bot token. Please paste it into Settings.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
+            return
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func StartBotButton() {
-    //registerBackgroundTask()
-    //botfunc()
-    UIApplication.shared.beginIgnoringInteractionEvents()
-    activityView.center = self.view.center
-    activityView.color? = UIColor.black
-    activityView.startAnimating()
+        //registerBackgroundTask()
+        //botfunc()
+        if(botStarted == true) {
+            return
+        }
+        self.statusLabel.text = "Starting Bot..."
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        activityView.center = self.view.center
+        activityView.color? = UIColor.black
+        activityView.startAnimating()
+        
+        self.view.addSubview(activityView)
+        if (Settings.token == "") {
+            let alert = UIAlertController(title: "No token loaded!", message: "The bot can't start until you give it your bot token. Please paste it into Settings.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
+            self.statusLabel.text = "Bot Offline"
+            activityView.stopAnimating()
+            UIApplication.shared.endIgnoringInteractionEvents()
+            return
+        }
+        var shieldOptions = ShieldOptions()
+        var swordOptions = SwordOptions()
+        shieldOptions.prefixes = [Settings.prefix]
+        shieldOptions.willDefaultHelp = true
+        swordOptions.isBot = true
+        swordOptions.willLog = true
+        Bot.bot = Shield(token: Settings.token, with: swordOptions, and: shieldOptions)
+        Bot.bot?.getGateway() { [unowned self] data, error in
+            if(error != nil) {
+                let alert = UIAlertController(title: "Invalid token!", message: "The token you provided is invalid. Please re-paste it in Settings.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                
+                self.present(alert, animated: true)
+                self.statusLabel.text = "Bot Offline"
+                self.activityView.stopAnimating()
+                UIApplication.shared.endIgnoringInteractionEvents()
+                return
+            } else {
+                self.continueInit()
+            }
+        }
+    }
     
-    self.view.addSubview(activityView)
-    if(botStarted == true) {
-    return
-    }
-    self.statusLabel.text = "Starting Bot..."
-    StartBot()
-    if(Settings.musicOn) {
-    player.play()
-    }
+    func continueInit() {
+        StartBot()
+        if(Settings.musicOn) {
+            player.play()
+        }
     }
     
     @IBAction func StartButton(_ sender: Any) {
@@ -164,20 +226,24 @@ class FirstViewController: UIViewController {
     
     func StartBot() {
         //task.startBackgroundTask()
-        print(Token.token)
+        print(Settings.token)
         Bot.bot?.editStatus(to: "online", playing: "with Sword!")
         
         Bot.bot?.on(.ready) { data in
             /*Bot.bot?.getUserGuilds { guilds, error in
-                guard error == nil else {
-                    // You have an error here
-                    return
-                }
-                
-                guilds!.forEach { self.MakeCell(guild: $0) }
-            }*/
+             guard error == nil else {
+             // You have an error here
+             return
+             }
+             
+             guilds!.forEach { self.MakeCell(guild: $0) }
+             }*/
             self.guildsAreReady()
         }
+        
+        /*Bot.bot?.on(.tokenInvalid) { data in
+            //stuff
+        }*/
         
         Bot.bot?.on(.disconnect) { data in
             Logs.logs += "\nBot shut down."
@@ -188,19 +254,26 @@ class FirstViewController: UIViewController {
         Bot.bot?.on(.messageCreate) { data in
             let msg = data as! Message
             
-            if(msg.content.hasPrefix("!") || msg.author?.id == Bot.bot?.user?.id || Settings.chatLog == true) {
+            if(msg.content.hasPrefix(Settings.prefix) || msg.author?.id == Bot.bot?.user?.id || Settings.chatLog == true) {
                 Logs.logs += (msg.author?.username)! + ": " + msg.content + "\n"
-            }
-            
-            if msg.content == "!ping" {
-                msg.reply(with: "Pong!")
             }
         }
         
-        Bot.bot?.register("yeet") { msg, args in
-            if(args[0] != "") {
-                msg.reply(with: args[0] + "got yeeted by: " + (msg.author?.username)!)
+        var pingOptions = CommandOptions()
+        var yeetOptions = CommandOptions()
+        yeetOptions.description = "Yeets whatever you want."
+        pingOptions.description = "Simply replies 'Pong!' to test if the bot is working"
+        
+        Bot.bot?.register("yeet", with: yeetOptions) { msg, args in
+            if(args.count != 0) {
+                msg.reply(with: args[0] + " got yeeted by: " + (msg.author?.username)!)
+            } else {
+                msg.reply(with: (msg.author?.username)! + " hella yeeted on everyone")
             }
+        }
+        
+        Bot.bot?.register("ping", with: pingOptions) { msg, args in
+            msg.reply(with: "Pong!")
         }
         
         Bot.bot?.connect()
@@ -249,9 +322,10 @@ class FirstViewController: UIViewController {
         }
         Bot.bot?.disconnect()
         Logs.logs += "\nBot shut down.\n"
-        self.statusLabel.text = "Bot offline"
+        self.statusLabel.text = "Bot Offline"
         self.botStarted = false
         player.stop()
+        UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
     }
     
     

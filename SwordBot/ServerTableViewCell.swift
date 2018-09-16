@@ -10,7 +10,7 @@ import UIKit
 
 class ServerTableViewCell: UITableViewCell {
     //MARK: Properties
-
+    
     @IBOutlet weak var serverNameLabel: UILabel!
     @IBOutlet weak var serverImageView: UIImageView!
     let cellIdentifier = "ServerTableViewCell"
@@ -19,10 +19,10 @@ class ServerTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -31,15 +31,15 @@ class ServerTableViewCell: UITableViewCell {
     }
     
     /*override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
-        // Configure the cell...
-        
-        return cell
-    }
+     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+     
+     // Configure the cell...
+     
+     return cell
+     }
+     
+     func numberOfSections(in tableView: UITableView) -> Int {
+     return 1
+     }*/
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }*/
-
 }

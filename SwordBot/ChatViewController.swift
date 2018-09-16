@@ -10,7 +10,7 @@ import UIKit
 import Sword
 
 class ChatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     @IBOutlet weak var serverPicker: UIPickerView!
     @IBOutlet weak var channelPicker: UIPickerView!
     @IBOutlet weak var chatField: UITextField!
@@ -44,7 +44,7 @@ class ChatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         channelPicker.dataSource = self
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -95,13 +95,13 @@ class ChatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func chatValueChanged(_ sender: UITextField) {
         /*var textToSend = chatField.text
-        var server = Bot.guilds![selectedServer]
-        var channellist: [GuildChannel] = []
-        for (_,channel) in server.channels {
-            channellist.append(channel)
-        }
-        var channeltosend = channellist[selectedChannel]
-        Bot.bot?.setTyping(for: channeltosend.id)*/
+         var server = Bot.guilds![selectedServer]
+         var channellist: [GuildChannel] = []
+         for (_,channel) in server.channels {
+         channellist.append(channel)
+         }
+         var channeltosend = channellist[selectedChannel]
+         Bot.bot?.setTyping(for: channeltosend.id)*/
     }
     
     @IBAction func deselectChatField(_ sender: UITextField) {
@@ -120,13 +120,13 @@ class ChatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

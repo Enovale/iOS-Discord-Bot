@@ -10,10 +10,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var tokenField: UITextField!
     @IBOutlet weak var musicSwitch: UISwitch!
     @IBOutlet weak var notificationsSwitch: UISwitch!
     @IBOutlet weak var chatLogSwitch: UISwitch!
     @IBOutlet weak var autoStartSwitch: UISwitch!
+    @IBOutlet weak var showTokenSwitch: UISwitch!
+    @IBOutlet weak var prefixField: UITextField!
     
     let defaults = UserDefaults.standard
     
@@ -37,6 +40,28 @@ class SettingsViewController: UIViewController {
         defaults.set(sender.isOn, forKey: "autoStartOn")
     }
     
+    @IBAction func toggleTokenShow(_ sender: UISwitch) {
+        if sender.isOn == true {
+            Settings.showToken = true
+            tokenField.isHidden = false
+        } else {
+            Settings.showToken = false
+            tokenField.isHidden = true
+        }
+    }
+    
+    @IBAction func tokenChange(_ sender: UITextField) {
+        Settings.token = sender.text!
+        defaults.set(Settings.token, forKey: "token")
+    }
+    
+    @IBAction func prefixChange(_ sender: UITextField) {
+        if sender.tag == 0 {
+            return
+        }
+        Settings.prefix = sender.text!
+        defaults.set(Settings.prefix, forKey: "prefix")
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         var musicBool = defaults.object(forKey:"musicOn") as? Bool
@@ -59,15 +84,26 @@ class SettingsViewController: UIViewController {
         notificationsSwitch.setOn(notificationsBool!, animated: false)
         chatLogSwitch.setOn(chatLogBool!, animated: false)
         autoStartSwitch.setOn(autoStartBool!, animated: false)
+        showTokenSwitch.setOn(Settings.showToken, animated: false)
         Settings.musicOn = musicBool!
         Settings.notificationsOn = notificationsBool!
         Settings.chatLog = chatLogBool!
         Settings.autoStart = autoStartBool!
+        
+        if(Settings.showToken == true) {
+            tokenField.isHidden = false
+        } else {
+            tokenField.isHidden = true
+        }
+        
+        tokenField.text = Settings.token
+        prefixField.text = Settings.prefix
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.setupHideKeyboardOnTap()
     }
     
     override func didReceiveMemoryWarning() {
