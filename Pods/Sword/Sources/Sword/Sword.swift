@@ -1115,6 +1115,31 @@ open class Sword: Eventable {
       }
     }
   }
+    
+    /**
+     Either get a cached guild or restfully get a guild
+     
+     - parameter guildId: Guild to get
+     - parameter rest: Whether or not to get this guild restfully or not
+     */
+    public func getGuildById(
+        _ guildId: Snowflake,
+        rest: Bool = false,
+        then completion: @escaping (Guild?, RequestError?) -> ()
+        ) {
+        guard rest else {
+            completion(self.guilds[guildId], nil)
+            return
+        }
+        
+        self.request(.getGuild(guildId)) { [unowned self] data, error in
+            if let error = error {
+                completion(nil, error)
+            }else {
+                completion(Guild(self, data as! [String: Any]), nil)
+            }
+        }
+    }
 
   /**
    Gets a guild's embed
@@ -1439,35 +1464,76 @@ open class Sword: Eventable {
     }
   }
   
-  /**
-   Get's the current user's guilds
-   
-   #### Option Params ####
-   
-   - **before**: Guild Id to get guilds before this one
-   - **after**: Guild Id to get guilds after this one
-   - **limit**: Amount of guilds to return (1-100)
-   
-   - parameter options: Dictionary containing options regarding what kind of guilds are returned, and amount
-  */
-  public func getUserGuilds(
-    with options: [String: Any]? = nil,
-    then completion: @escaping ([UserGuild]?, RequestError?) -> ()
-  ) {
-    self.request(.getCurrentUserGuilds, params: options) { data, error in
-      if let error = error {
-        completion(nil, error)
-      }else {
-        var returnGuilds = [UserGuild]()
-        let guilds = data as! [[String: Any]]
-        for guild in guilds {
-          returnGuilds.append(UserGuild(guild))
+    /**
+     Get's the current user's guilds
+     
+     #### Option Params ####
+     
+     - **before**: Guild Id to get guilds before this one
+     - **after**: Guild Id to get guilds after this one
+     - **limit**: Amount of guilds to return (1-100)
+     
+     - parameter options: Dictionary containing options regarding what kind of guilds are returned, and amount
+     */
+    public func getUserGuilds(
+        with options: [String: Any]? = nil,
+        then completion: @escaping ([UserGuild]?, RequestError?) -> ()
+        ) {
+        self.request(.getCurrentUserGuilds, params: options) { data, error in
+            if let error = error {
+                completion(nil, error)
+            }else {
+                var returnGuilds = [UserGuild]()
+                let guilds = data as! [[String: Any]]
+                for guild in guilds {
+                    returnGuilds.append(UserGuild(guild))
+                }
+                
+                completion(returnGuilds, nil)
+            }
         }
-        
-        completion(returnGuilds, nil)
-      }
     }
-  }
+    
+    /**
+     Get's the current user's guilds as Guild Object
+     
+     #### Option Params ####
+     
+     - **before**: Guild Id to get guilds before this one
+     - **after**: Guild Id to get guilds after this one
+     - **limit**: Amount of guilds to return (1-100)
+     
+     - parameter options: Dictionary containing options regarding what kind of guilds are returned, and amount
+     */
+    public func getGuilds(
+        with options: [String: Any]? = nil,
+        then completion: @escaping ([Guild]?, RequestError?) -> ()
+        ) {
+        self.request(.getCurrentUserGuilds, params: options) { data, error in
+            if let error = error {
+                completion(nil, error)
+            }else {
+                var returnUserGuilds = [UserGuild]()
+                var returnGuilds = [Guild]()
+                let guilds = data as! [[String: Any]]
+                for guild in guilds {
+                    returnUserGuilds.append(UserGuild(guild))
+                }
+                for userguild in returnUserGuilds {
+                    self.getGuildById(userguild.id, rest: true) { append, error in
+                        if(error != nil) {
+                            print(error!)
+                        }
+                        returnGuilds.append(append!)
+                    }
+                }
+                
+                print(returnGuilds)
+                
+                completion(returnGuilds, nil)
+            }
+        }
+    }
   
   /**
    Gets an array of voice regions from a guild

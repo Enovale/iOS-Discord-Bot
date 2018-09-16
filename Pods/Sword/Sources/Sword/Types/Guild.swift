@@ -102,8 +102,8 @@ public class Guild: Updatable {
     self.afkChannelId = Snowflake(json["afk_channel_id"])
     self.afkTimeout = json["afk_timeout"] as? Int
 
-    if let channels = json["channels"] as? [[String: Any]] {
-      for channelData in channels {
+    if let channelsList = json["channels"] as? [[String: Any]] {
+      for channelData in channelsList {
         switch channelData["type"] as! Int {
         case 0:
           let channel = GuildText(sword, channelData)

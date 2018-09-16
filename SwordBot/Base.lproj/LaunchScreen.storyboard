@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="squid.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eNS-8e-Law">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SwordBot" translatesAutoresizingMaskIntoConstraints="NO" id="eNS-8e-Law">
                                 <rect key="frame" x="87" y="325" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="squid.jpg" width="306" height="319"/>
+        <image name="SwordBot" width="1000" height="1000"/>
     </resources>
 </document>
