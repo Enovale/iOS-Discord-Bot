@@ -30,7 +30,6 @@ class ChatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         var index = 0
         for guild in (Bot.guilds)! {
             if(index == 0) {
-                print(guild.name)
                 for channel in guild.channels.values {
                     channels.append(channel.name!)
                 }
@@ -75,7 +74,6 @@ class ChatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             } else if newrow > channels.count {
                 newrow = channels.count
             }
-            print(newrow)
             return "\(channels[newrow])"
         }else{
             var newchannels: [String] = []
