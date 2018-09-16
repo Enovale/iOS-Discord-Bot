@@ -288,7 +288,6 @@ class FirstViewController: UIViewController {
             return
         }
         
-        print(Bot.bot?.guilds as Any)
         for guild in (Bot.bot?.guilds)! {
             Bot.guilds?.append(guild.value)
         }

@@ -32,7 +32,6 @@ class BasicCellWrapper: DynamicRow {
     func getCellFor(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BasicCell.self), for: indexPath) as! BasicCell
         cell.label.text = title
-        print(image)
         cell.imageObj?.load(url: URL(string: String(describing: image))!)
         return cell
     }
