@@ -10,6 +10,7 @@ import UIKit
 import Sword
 import AVFoundation
 import MediaPlayer
+import Dispatch
 
 struct Logs {
     static var logs = ""
@@ -20,14 +21,16 @@ struct Token {
 }
 
 struct Bot {
-    static var bot: Sword? = nil
-    static var shield: Shield? = nil
+    static var bot: Shield? = nil
+    static var guilds: [Guild]? = []
+    static var guildsAreReady: Bool = false
 }
 
 struct Settings {
     static var musicOn = true
     static var notificationsOn = true
     static var chatLog = false
+    static var autoStart = false
 }
 
 class FirstViewController: UIViewController {
@@ -40,12 +43,15 @@ class FirstViewController: UIViewController {
     var view2 = SecondViewController()
     var botStarted = false
     var token = ""
+    let defaults = UserDefaults.standard
     
     var player:AVAudioPlayer = AVAudioPlayer()
     
     var videoYTLink = "http://www.youtube.com/watch?v=PT2_F-1esPk";
     
     var converterLink = "www.youtubeinmp3.com/fetch/?format=text&video=";
+    
+    let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     
     @IBOutlet weak var statusLabel: UILabel!
     
@@ -84,6 +90,21 @@ class FirstViewController: UIViewController {
         catch{
             
         }
+        UpdateSettings()
+        if Settings.autoStart == true {
+            StartBotButton()
+        }
+    }
+    
+    func UpdateSettings() {
+        let musicBool = defaults.object(forKey:"musicOn") as? Bool
+        let notificationsBool = defaults.object(forKey:"notificationsOn") as? Bool
+        let chatLogBool = defaults.object(forKey:"chatOn") as? Bool
+        let autoStartBool = defaults.object(forKey:"autoStartOn") as? Bool
+        Settings.musicOn = musicBool!
+        Settings.notificationsOn = notificationsBool!
+        Settings.chatLog = chatLogBool!
+        Settings.autoStart = autoStartBool!
     }
     
     func initBot() {
@@ -99,8 +120,14 @@ class FirstViewController: UIViewController {
             // example.txt not found!
             print("token file not found")
         }
-        Bot.bot = Sword(token: token)
-        Bot.shield = Shield(token: token)
+        //Bot.bot = Sword(token: token)
+        var shieldOptions = ShieldOptions()
+        var swordOptions = SwordOptions()
+        shieldOptions.prefixes = ["!"]
+        shieldOptions.willDefaultHelp = true
+        swordOptions.isBot = true
+        swordOptions.willLog = true
+        Bot.bot = Shield(token: token, with: swordOptions, and: shieldOptions)
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,17 +135,31 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func StartBotButton() {
+    //registerBackgroundTask()
+    //botfunc()
+    UIApplication.shared.beginIgnoringInteractionEvents()
+    activityView.center = self.view.center
+    activityView.color? = UIColor.black
+    activityView.startAnimating()
+    
+    self.view.addSubview(activityView)
+    if(botStarted == true) {
+    return
+    }
+    self.statusLabel.text = "Starting Bot..."
+    StartBot()
+    if(Settings.musicOn) {
+    player.play()
+    }
+    }
+    
     @IBAction func StartButton(_ sender: Any) {
-        //registerBackgroundTask()
-        //botfunc()
-        if(botStarted == true) {
-            return
-        }
-        self.statusLabel.text = "Starting Bot..."
-        StartBot()
-        if(Settings.musicOn) {
-            player.play()
-        }
+        StartBotButton()
+    }
+    
+    func MakeCell(guild: Guild) {
+        Bot.guilds?.append(guild)
     }
     
     func StartBot() {
@@ -127,10 +168,15 @@ class FirstViewController: UIViewController {
         Bot.bot?.editStatus(to: "online", playing: "with Sword!")
         
         Bot.bot?.on(.ready) { data in
-            self.botStarted = true
-            Logs.logs = "Bot Ready\n"
-            self.statusLabel.text = "Bot running"
-            print("Bot started!")
+            /*Bot.bot?.getUserGuilds { guilds, error in
+                guard error == nil else {
+                    // You have an error here
+                    return
+                }
+                
+                guilds!.forEach { self.MakeCell(guild: $0) }
+            }*/
+            self.guildsAreReady()
         }
         
         Bot.bot?.on(.disconnect) { data in
@@ -151,13 +197,35 @@ class FirstViewController: UIViewController {
             }
         }
         
-        Bot.shield?.register("yeet") { msg, args in
+        Bot.bot?.register("yeet") { msg, args in
             if(args[0] != "") {
                 msg.reply(with: args[0] + "got yeeted by: " + (msg.author?.username)!)
             }
         }
         
         Bot.bot?.connect()
+    }
+    
+    func guildsAreReady() {
+        guard (Bot.bot?.unavailableGuilds.isEmpty)! else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+                self.guildsAreReady()
+            }
+            
+            return
+        }
+        
+        print(Bot.bot?.guilds as Any)
+        for guild in (Bot.bot?.guilds)! {
+            Bot.guilds?.append(guild.value)
+        }
+        Bot.guildsAreReady = true
+        self.botStarted = true
+        Logs.logs = "Bot Ready\n"
+        self.statusLabel.text = "Bot running"
+        print("Bot started!")
+        UIApplication.shared.endIgnoringInteractionEvents()
+        activityView.stopAnimating()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){

@@ -8,13 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		AF936EF6808DD20008BAB50E /* Pods_SwordBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */; };
+		CF1D035E214C7BDE00ED7C06 /* DynamicTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0346214C7BDB00ED7C06 /* DynamicTVC.swift */; };
+		CF1D0363214C7BDE00ED7C06 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D034E214C7BDD00ED7C06 /* BasicCell.swift */; };
+		CF1D0364214C7BDE00ED7C06 /* BasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1D034F214C7BDD00ED7C06 /* BasicCell.xib */; };
+		CF1D0365214C7BDE00ED7C06 /* BasicSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0350214C7BDD00ED7C06 /* BasicSection.swift */; };
+		CF1D0366214C7BDE00ED7C06 /* DynamicRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0351214C7BDD00ED7C06 /* DynamicRow.swift */; };
+		CF1D0367214C7BDE00ED7C06 /* DynamicSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0352214C7BDD00ED7C06 /* DynamicSection.swift */; };
+		CF1D0369214C7BDE00ED7C06 /* FavouriteHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0354214C7BDD00ED7C06 /* FavouriteHeader.swift */; };
+		CF1D036A214C7BDE00ED7C06 /* FavouriteHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1D0355214C7BDD00ED7C06 /* FavouriteHeader.xib */; };
+		CF1D036B214C7BDE00ED7C06 /* FavouriteSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0356214C7BDD00ED7C06 /* FavouriteSection.swift */; };
+		CF1D036D214C7BDE00ED7C06 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0358214C7BDD00ED7C06 /* SwitchCell.swift */; };
+		CF1D036E214C7BDE00ED7C06 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1D0359214C7BDD00ED7C06 /* SwitchCell.xib */; };
+		CF1D036F214C7BDE00ED7C06 /* SwitchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D035A214C7BDD00ED7C06 /* SwitchSection.swift */; };
+		CF1D0371214C7BDE00ED7C06 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D035C214C7BDD00ED7C06 /* TextFieldCell.swift */; };
+		CF1D0372214C7BDE00ED7C06 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1D035D214C7BDD00ED7C06 /* TextFieldCell.xib */; };
+		CF1D0377214C850000ED7C06 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0376214C850000ED7C06 /* TestCollectionViewController.swift */; };
+		CF1D0379214C8F1500ED7C06 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0378214C8F1500ED7C06 /* ImageExtension.swift */; };
+		CF1D037D214CB20100ED7C06 /* ChannelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D037C214CB20000ED7C06 /* ChannelsTableViewController.swift */; };
+		CF1D0381214CB2B300ED7C06 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0380214CB2B300ED7C06 /* NavigationController.swift */; };
+		CF1D0383214CBC4D00ED7C06 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */; };
 		CF2BB721214A49C600953BE8 /* token.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB720214A49C600953BE8 /* token.txt */; };
 		CF2BB725214A4CA500953BE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB724214A4CA400953BE8 /* README.md */; };
+		CF735DCE214E271600D2DD6D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF735DCD214E271600D2DD6D /* TabBarController.swift */; };
+		CF735DD0214E42FE00D2DD6D /* discord.png in Resources */ = {isa = PBXBuildFile; fileRef = CF735DCF214E42FE00D2DD6D /* discord.png */; };
+		CFA3CDAE214EA28800EF3121 /* SwordBot.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA3CDAD214EA28800EF3121 /* SwordBot.png */; };
+		CFA3CDB0214EA2C300EF3121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA3CDAF214EA2C300EF3121 /* Assets.xcassets */; };
 		CFC4DFE2214B6C9B0053DC9B /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE1214B6C9B0053DC9B /* blank.wav */; };
 		CFC4DFE4214B6F5C0053DC9B /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE3214B6F5B0053DC9B /* settings.png */; };
 		CFC4DFE6214B70A40053DC9B /* logs.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE5214B70A40053DC9B /* logs.png */; };
 		CFC4DFE8214B711A0053DC9B /* controls.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE7214B711A0053DC9B /* controls.png */; };
-		CFC4DFEA214B71EE0053DC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE9214B71EE0053DC9B /* Assets.xcassets */; };
+		CFC4DFEC214C6BDB0053DC9B /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4DFEB214C6BDB0053DC9B /* ServerTableViewCell.swift */; };
 		CFD01A0A2149BD9E00C9936C /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD01A092149BD9E00C9936C /* BackgroundTask.swift */; };
 		CFD01A0E2149F75800C9936C /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFD01A0D2149F75800C9936C /* song.mp3 */; };
 		CFD01A12214A144B00C9936C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD01A11214A144B00C9936C /* SettingsViewController.swift */; };
@@ -49,13 +72,36 @@
 		24C9FBD11D1D05B9739ABDBD /* Pods-SwordBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwordBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot.debug.xcconfig"; sourceTree = "<group>"; };
 		4E43DE2145431AA2CCEFDC3B /* Pods-SwordBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwordBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot.release.xcconfig"; sourceTree = "<group>"; };
 		AB379F392277366B08BD0DA3 /* Pods_SwordBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwordBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1D0346214C7BDB00ED7C06 /* DynamicTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicTVC.swift; sourceTree = "<group>"; };
+		CF1D034E214C7BDD00ED7C06 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		CF1D034F214C7BDD00ED7C06 /* BasicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicCell.xib; sourceTree = "<group>"; };
+		CF1D0350214C7BDD00ED7C06 /* BasicSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicSection.swift; sourceTree = "<group>"; };
+		CF1D0351214C7BDD00ED7C06 /* DynamicRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicRow.swift; sourceTree = "<group>"; };
+		CF1D0352214C7BDD00ED7C06 /* DynamicSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicSection.swift; sourceTree = "<group>"; };
+		CF1D0354214C7BDD00ED7C06 /* FavouriteHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteHeader.swift; sourceTree = "<group>"; };
+		CF1D0355214C7BDD00ED7C06 /* FavouriteHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouriteHeader.xib; sourceTree = "<group>"; };
+		CF1D0356214C7BDD00ED7C06 /* FavouriteSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteSection.swift; sourceTree = "<group>"; };
+		CF1D0358214C7BDD00ED7C06 /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		CF1D0359214C7BDD00ED7C06 /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
+		CF1D035A214C7BDD00ED7C06 /* SwitchSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchSection.swift; sourceTree = "<group>"; };
+		CF1D035C214C7BDD00ED7C06 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		CF1D035D214C7BDD00ED7C06 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		CF1D0376214C850000ED7C06 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
+		CF1D0378214C8F1500ED7C06 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		CF1D037C214CB20000ED7C06 /* ChannelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChannelsTableViewController.swift; path = /Users/elijah/Documents/SwordBot/SwordBot/SwordBot/ChannelsTableViewController.swift; sourceTree = "<absolute>"; };
+		CF1D0380214CB2B300ED7C06 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CF2BB720214A49C600953BE8 /* token.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = token.txt; sourceTree = "<group>"; };
 		CF2BB724214A4CA400953BE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		CF735DCD214E271600D2DD6D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CF735DCF214E42FE00D2DD6D /* discord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discord.png; sourceTree = "<group>"; };
+		CFA3CDAD214EA28800EF3121 /* SwordBot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwordBot.png; sourceTree = "<group>"; };
+		CFA3CDAF214EA2C300EF3121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFC4DFE1214B6C9B0053DC9B /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
 		CFC4DFE3214B6F5B0053DC9B /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		CFC4DFE5214B70A40053DC9B /* logs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logs.png; sourceTree = "<group>"; };
 		CFC4DFE7214B711A0053DC9B /* controls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls.png; sourceTree = "<group>"; };
-		CFC4DFE9214B71EE0053DC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFC4DFEB214C6BDB0053DC9B /* ServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
 		CFD01A092149BD9E00C9936C /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		CFD01A0D2149F75800C9936C /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		CFD01A11214A144B00C9936C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +155,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF1D0373214C7BEB00ED7C06 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D034E214C7BDD00ED7C06 /* BasicCell.swift */,
+				CF1D034F214C7BDD00ED7C06 /* BasicCell.xib */,
+				CF1D0354214C7BDD00ED7C06 /* FavouriteHeader.swift */,
+				CF1D0355214C7BDD00ED7C06 /* FavouriteHeader.xib */,
+				CF1D0358214C7BDD00ED7C06 /* SwitchCell.swift */,
+				CF1D0359214C7BDD00ED7C06 /* SwitchCell.xib */,
+				CF1D035C214C7BDD00ED7C06 /* TextFieldCell.swift */,
+				CF1D035D214C7BDD00ED7C06 /* TextFieldCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CF1D0374214C7BF700ED7C06 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D0351214C7BDD00ED7C06 /* DynamicRow.swift */,
+				CF1D0352214C7BDD00ED7C06 /* DynamicSection.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CF1D0375214C7C0100ED7C06 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D0350214C7BDD00ED7C06 /* BasicSection.swift */,
+				CF1D0356214C7BDD00ED7C06 /* FavouriteSection.swift */,
+				CF1D035A214C7BDD00ED7C06 /* SwitchSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
 		CFDCBC2B2148757D00CFFBF8 = {
 			isa = PBXGroup;
 			children = (
@@ -134,21 +214,34 @@
 		CFDCBC362148757D00CFFBF8 /* SwordBot */ = {
 			isa = PBXGroup;
 			children = (
+				CFA3CDAF214EA2C300EF3121 /* Assets.xcassets */,
+				CF1D0375214C7C0100ED7C06 /* Sections */,
+				CF1D0374214C7BF700ED7C06 /* Protocols */,
+				CF1D0373214C7BEB00ED7C06 /* Cells */,
 				CF2BB724214A4CA400953BE8 /* README.md */,
+				CF1D0346214C7BDB00ED7C06 /* DynamicTVC.swift */,
 				CFC4DFE5214B70A40053DC9B /* logs.png */,
+				CF735DCF214E42FE00D2DD6D /* discord.png */,
 				CFC4DFE7214B711A0053DC9B /* controls.png */,
+				CFA3CDAD214EA28800EF3121 /* SwordBot.png */,
 				CFC4DFE3214B6F5B0053DC9B /* settings.png */,
 				CFC4DFE1214B6C9B0053DC9B /* blank.wav */,
 				CFD01A0D2149F75800C9936C /* song.mp3 */,
 				CFD01A13214A192200C9936C /* squid.jpg */,
 				CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */,
+				CF1D0378214C8F1500ED7C06 /* ImageExtension.swift */,
 				CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */,
 				CF2BB720214A49C600953BE8 /* token.txt */,
 				CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */,
 				CFD01A11214A144B00C9936C /* SettingsViewController.swift */,
 				CFD01A092149BD9E00C9936C /* BackgroundTask.swift */,
+				CF1D0376214C850000ED7C06 /* TestCollectionViewController.swift */,
+				CF1D037C214CB20000ED7C06 /* ChannelsTableViewController.swift */,
 				CFDCBC3D2148757D00CFFBF8 /* Main.storyboard */,
-				CFC4DFE9214B71EE0053DC9B /* Assets.xcassets */,
+				CF735DCD214E271600D2DD6D /* TabBarController.swift */,
+				CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */,
+				CF1D0380214CB2B300ED7C06 /* NavigationController.swift */,
+				CFC4DFEB214C6BDB0053DC9B /* ServerTableViewCell.swift */,
 				CFDCBC422148757D00CFFBF8 /* LaunchScreen.storyboard */,
 				CFDCBC452148757D00CFFBF8 /* Info.plist */,
 			);
@@ -297,9 +390,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2BB721214A49C600953BE8 /* token.txt in Resources */,
+				CF1D0372214C7BDE00ED7C06 /* TextFieldCell.xib in Resources */,
 				CFDCBC442148757D00CFFBF8 /* LaunchScreen.storyboard in Resources */,
-				CFC4DFEA214B71EE0053DC9B /* Assets.xcassets in Resources */,
+				CF735DD0214E42FE00D2DD6D /* discord.png in Resources */,
+				CF1D036A214C7BDE00ED7C06 /* FavouriteHeader.xib in Resources */,
 				CFD01A0E2149F75800C9936C /* song.mp3 in Resources */,
+				CFA3CDB0214EA2C300EF3121 /* Assets.xcassets in Resources */,
+				CFA3CDAE214EA28800EF3121 /* SwordBot.png in Resources */,
+				CF1D036E214C7BDE00ED7C06 /* SwitchCell.xib in Resources */,
+				CF1D0364214C7BDE00ED7C06 /* BasicCell.xib in Resources */,
 				CFC4DFE8214B711A0053DC9B /* controls.png in Resources */,
 				CFDCBC3F2148757D00CFFBF8 /* Main.storyboard in Resources */,
 				CFC4DFE2214B6C9B0053DC9B /* blank.wav in Resources */,
@@ -372,10 +471,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1D0377214C850000ED7C06 /* TestCollectionViewController.swift in Sources */,
+				CF1D037D214CB20100ED7C06 /* ChannelsTableViewController.swift in Sources */,
+				CF1D0367214C7BDE00ED7C06 /* DynamicSection.swift in Sources */,
+				CF1D0363214C7BDE00ED7C06 /* BasicCell.swift in Sources */,
 				CFDCBC3C2148757D00CFFBF8 /* SecondViewController.swift in Sources */,
+				CF1D0369214C7BDE00ED7C06 /* FavouriteHeader.swift in Sources */,
+				CF1D0366214C7BDE00ED7C06 /* DynamicRow.swift in Sources */,
+				CF1D036B214C7BDE00ED7C06 /* FavouriteSection.swift in Sources */,
+				CF1D0379214C8F1500ED7C06 /* ImageExtension.swift in Sources */,
 				CFDCBC382148757D00CFFBF8 /* AppDelegate.swift in Sources */,
+				CF1D0383214CBC4D00ED7C06 /* ChatViewController.swift in Sources */,
 				CFD01A0A2149BD9E00C9936C /* BackgroundTask.swift in Sources */,
 				CFD01A12214A144B00C9936C /* SettingsViewController.swift in Sources */,
+				CF735DCE214E271600D2DD6D /* TabBarController.swift in Sources */,
+				CF1D035E214C7BDE00ED7C06 /* DynamicTVC.swift in Sources */,
+				CF1D0371214C7BDE00ED7C06 /* TextFieldCell.swift in Sources */,
+				CFC4DFEC214C6BDB0053DC9B /* ServerTableViewCell.swift in Sources */,
+				CF1D036F214C7BDE00ED7C06 /* SwitchSection.swift in Sources */,
+				CF1D0365214C7BDE00ED7C06 /* BasicSection.swift in Sources */,
+				CF1D0381214CB2B300ED7C06 /* NavigationController.swift in Sources */,
+				CF1D036D214C7BDE00ED7C06 /* SwitchCell.swift in Sources */,
 				CFDCBC3A2148757D00CFFBF8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +659,7 @@
 			baseConfigurationReference = 24C9FBD11D1D05B9739ABDBD /* Pods-SwordBot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWG8VUH2Z6;
 				INFOPLIST_FILE = SwordBot/Info.plist;
@@ -559,6 +676,7 @@
 			baseConfigurationReference = 4E43DE2145431AA2CCEFDC3B /* Pods-SwordBot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWG8VUH2Z6;
 				INFOPLIST_FILE = SwordBot/Info.plist;

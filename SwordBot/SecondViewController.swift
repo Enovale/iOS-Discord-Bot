@@ -33,7 +33,7 @@ class SecondViewController: UIViewController {
     
     public func UpdateLogs() {
         LogObject.text = Logs.logs
-        let range = NSMakeRange(LogObject.text.characters.count - 1, 0)
+        let range = NSMakeRange(LogObject.text.count - 1, 0)
         LogObject.scrollRangeToVisible(range)
     }
     
