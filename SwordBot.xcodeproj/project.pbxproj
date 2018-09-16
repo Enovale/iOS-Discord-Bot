@@ -27,7 +27,6 @@
 		CF1D037D214CB20100ED7C06 /* ChannelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D037C214CB20000ED7C06 /* ChannelsTableViewController.swift */; };
 		CF1D0381214CB2B300ED7C06 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0380214CB2B300ED7C06 /* NavigationController.swift */; };
 		CF1D0383214CBC4D00ED7C06 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */; };
-		CF2BB721214A49C600953BE8 /* token.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB720214A49C600953BE8 /* token.txt */; };
 		CF2BB725214A4CA500953BE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB724214A4CA400953BE8 /* README.md */; };
 		CF735DCE214E271600D2DD6D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF735DCD214E271600D2DD6D /* TabBarController.swift */; };
 		CF735DD0214E42FE00D2DD6D /* discord.png in Resources */ = {isa = PBXBuildFile; fileRef = CF735DCF214E42FE00D2DD6D /* discord.png */; };
@@ -91,7 +90,6 @@
 		CF1D037C214CB20000ED7C06 /* ChannelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChannelsTableViewController.swift; path = /Users/elijah/Documents/SwordBot/SwordBot/SwordBot/ChannelsTableViewController.swift; sourceTree = "<absolute>"; };
 		CF1D0380214CB2B300ED7C06 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		CF2BB720214A49C600953BE8 /* token.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = token.txt; sourceTree = "<group>"; };
 		CF2BB724214A4CA400953BE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		CF735DCD214E271600D2DD6D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CF735DCF214E42FE00D2DD6D /* discord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discord.png; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 				CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */,
 				CF1D0378214C8F1500ED7C06 /* ImageExtension.swift */,
 				CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */,
-				CF2BB720214A49C600953BE8 /* token.txt */,
 				CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */,
 				CFD01A11214A144B00C9936C /* SettingsViewController.swift */,
 				CFD01A092149BD9E00C9936C /* BackgroundTask.swift */,
@@ -389,7 +386,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2BB721214A49C600953BE8 /* token.txt in Resources */,
 				CF1D0372214C7BDE00ED7C06 /* TextFieldCell.xib in Resources */,
 				CFDCBC442148757D00CFFBF8 /* LaunchScreen.storyboard in Resources */,
 				CF735DD0214E42FE00D2DD6D /* discord.png in Resources */,

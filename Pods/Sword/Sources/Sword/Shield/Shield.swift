@@ -234,7 +234,9 @@ open class Shield: Sword {
   
   /// Creates a default help command for the bot
   func registerHelp() {
-    self.register("help") { [unowned self] msg, args in
+    var helpOptions = CommandOptions()
+    helpOptions.description = "Displays this message"
+    self.register("help", with: helpOptions) { [unowned self] msg, args in
       var embed = Embed()
       embed.title = "\(self.user!.username!)'s Help"
       
