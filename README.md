@@ -2,6 +2,8 @@
 A simple bot that can be ran from an iPhone
 # About
 Be careful, this will use up a lot of power and drain your battery.
+
+Works best on any + model phone.
 # Installation
 Open the project in Xcode. 
 
