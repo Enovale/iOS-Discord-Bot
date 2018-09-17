@@ -671,6 +671,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWG8VUH2Z6;
 				INFOPLIST_FILE = SwordBot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -688,6 +689,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWG8VUH2Z6;
 				INFOPLIST_FILE = SwordBot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
