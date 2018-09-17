@@ -50,6 +50,7 @@ class DynamicTVC: UITableViewController {
         // basic section
         
         var stats: [BasicCellWrapper] = []
+        var commandlist: [BasicTextCellWrapper] = []
         
         var isBot = ""
         if(Bot.bot!.user?.isBot)! {
@@ -62,9 +63,23 @@ class DynamicTVC: UITableViewController {
         
         stats.append(self.cellWrapper(title: isBot, image: "https://"))
         stats.append(self.cellWrapper(title: (Bot.bot!.user?.username)!, image: botAvatar!))
+        for command in (Bot.bot?.commands)! {
+            let desc = command.value.options.description
+            let casesens = "\n\nisCaseSensitive is " + String(describing: command.value.options.isCaseSensitive)
+            var aliases = "\n\nAliases are: "
+            if command.value.options.aliases.count == 0 {
+                aliases = aliases + "none"
+            }
+            for alias in command.value.options.aliases {
+                aliases = aliases + ", " + alias
+            }
+            commandlist.append(BasicTextCellWrapper(title: Settings.prefix + command.value.name) { [weak self] text in self?.showAlert(title: Settings.prefix + command.value.name, message: desc + casesens + aliases);})
+        }
         
         let botStats = BasicSection(title: "Stats", rows: stats)
         sections.append(botStats)
+        let botCommands = BasicSection(title: "Commands", rows: commandlist)
+        sections.append(botCommands)
         
         var servers: [BasicCellWrapper] = []
         for guild in Bot.guilds! {
@@ -73,7 +88,13 @@ class DynamicTVC: UITableViewController {
             let emojis = " channels. Server has " + String(guild.emojis.count)
             let islarge = " emojis, and isLarge is: " + String(describing: guild.isLarge!)
             let stats = members + channels + emojis + islarge
-            servers.append(self.cellWrapper(title: guild.name, image: "https://cdn.discordapp.com/icons/\(guild.id)/\(String(describing: guild.icon!)).png", name: guild.name, stats: stats))
+            var image = "https://"
+            if guild.icon == nil {
+                image = "https://"
+            } else {
+                image = "https://cdn.discordapp.com/icons/\(guild.id)/\(String(describing: guild.icon!)).png"
+            }
+            servers.append(self.cellWrapper(title: guild.name, image: image, name: guild.name, stats: stats))
         }
         
         let discordServers = BasicSection(title: "Servers", rows: servers)
@@ -99,12 +120,17 @@ class DynamicTVC: UITableViewController {
     private func registerRows() {
         let basicCellNib = UINib(nibName: "BasicCell", bundle: nil)
         self.tableView.register(basicCellNib, forCellReuseIdentifier: String(describing: BasicCell.self))
+        let textCellNib = UINib(nibName: "TextCell", bundle: nil)
+        self.tableView.register(textCellNib, forCellReuseIdentifier: String(describing: TextCell.self))
         let textFieldCellNib = UINib(nibName: "TextFieldCell", bundle: nil)
         self.tableView.register(textFieldCellNib, forCellReuseIdentifier: String(describing: TextFieldCell.self))
         let switchCellNib = UINib(nibName: "SwitchCell", bundle: nil)
         self.tableView.register(switchCellNib, forCellReuseIdentifier: String(describing: SwitchCell.self))
         let favouriteHeaderNib = UINib(nibName: "FavouriteHeader", bundle: nil)
         self.tableView.register(favouriteHeaderNib, forCellReuseIdentifier: String(describing: FavouriteHeader.self))
+        self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 22
     }
     
     private func showAlert(title: String, message: String) {

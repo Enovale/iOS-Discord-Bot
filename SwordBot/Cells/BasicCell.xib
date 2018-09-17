@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,18 +19,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="117.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="discord.png" translatesAutoresizingMaskIntoConstraints="NO" id="6IQ-ks-YKh">
-                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c99-dz-0Fx">
-                        <rect key="frame" x="126" y="49" width="242" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c99-dz-0Fx">
+                        <rect key="frame" x="126" y="11" width="242" height="96"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discord.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6IQ-ks-YKh">
+                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="999" constant="118" id="aAa-Y6-j1o"/>
+                            <constraint firstAttribute="width" constant="118" id="exF-cy-Oec"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="6IQ-ks-YKh" firstAttribute="centerY" secondItem="pAf-UT-CCz" secondAttribute="centerY" id="8bl-L1-CDr"/>
+                    <constraint firstItem="6IQ-ks-YKh" firstAttribute="top" secondItem="pAf-UT-CCz" secondAttribute="top" id="DQd-ou-qW5"/>
+                    <constraint firstItem="c99-dz-0Fx" firstAttribute="centerY" secondItem="6IQ-ks-YKh" secondAttribute="centerY" id="JrV-dx-URu"/>
+                    <constraint firstItem="c99-dz-0Fx" firstAttribute="leading" secondItem="6IQ-ks-YKh" secondAttribute="trailing" constant="8" symbolic="YES" id="QF7-Bk-PgI"/>
+                    <constraint firstItem="6IQ-ks-YKh" firstAttribute="leading" secondItem="pAf-UT-CCz" secondAttribute="leading" id="Ssf-9l-bXf"/>
+                    <constraint firstAttribute="bottom" secondItem="6IQ-ks-YKh" secondAttribute="bottom" constant="-0.5" id="Y4K-QX-mnu"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="c99-dz-0Fx" secondAttribute="trailing" constant="-9" id="ktP-bM-KM6"/>
+                    <constraint firstItem="c99-dz-0Fx" firstAttribute="top" secondItem="pAf-UT-CCz" secondAttribute="topMargin" id="kxa-aj-chl"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageObj" destination="6IQ-ks-YKh" id="Euq-qT-bcc"/>

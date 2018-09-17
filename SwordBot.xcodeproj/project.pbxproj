@@ -23,7 +23,7 @@
 		CF1D0371214C7BDE00ED7C06 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D035C214C7BDD00ED7C06 /* TextFieldCell.swift */; };
 		CF1D0372214C7BDE00ED7C06 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1D035D214C7BDD00ED7C06 /* TextFieldCell.xib */; };
 		CF1D0377214C850000ED7C06 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0376214C850000ED7C06 /* TestCollectionViewController.swift */; };
-		CF1D0379214C8F1500ED7C06 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0378214C8F1500ED7C06 /* ImageExtension.swift */; };
+		CF1D0379214C8F1500ED7C06 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0378214C8F1500ED7C06 /* Extensions.swift */; };
 		CF1D037D214CB20100ED7C06 /* ChannelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D037C214CB20000ED7C06 /* ChannelsTableViewController.swift */; };
 		CF1D0381214CB2B300ED7C06 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0380214CB2B300ED7C06 /* NavigationController.swift */; };
 		CF1D0383214CBC4D00ED7C06 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */; };
@@ -32,6 +32,9 @@
 		CF735DD0214E42FE00D2DD6D /* discord.png in Resources */ = {isa = PBXBuildFile; fileRef = CF735DCF214E42FE00D2DD6D /* discord.png */; };
 		CFA3CDAE214EA28800EF3121 /* SwordBot.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA3CDAD214EA28800EF3121 /* SwordBot.png */; };
 		CFA3CDB0214EA2C300EF3121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA3CDAF214EA2C300EF3121 /* Assets.xcassets */; };
+		CFA3CDB2214F305400EF3121 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3CDB1214F305400EF3121 /* MainView.swift */; };
+		CFA3CDB5214F5DE700EF3121 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3CDB3214F5DE700EF3121 /* TextCell.swift */; };
+		CFA3CDB6214F5DE700EF3121 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA3CDB4214F5DE700EF3121 /* TextCell.xib */; };
 		CFC4DFE2214B6C9B0053DC9B /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE1214B6C9B0053DC9B /* blank.wav */; };
 		CFC4DFE4214B6F5C0053DC9B /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE3214B6F5B0053DC9B /* settings.png */; };
 		CFC4DFE6214B70A40053DC9B /* logs.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC4DFE5214B70A40053DC9B /* logs.png */; };
@@ -86,7 +89,7 @@
 		CF1D035C214C7BDD00ED7C06 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		CF1D035D214C7BDD00ED7C06 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		CF1D0376214C850000ED7C06 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
-		CF1D0378214C8F1500ED7C06 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		CF1D0378214C8F1500ED7C06 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CF1D037C214CB20000ED7C06 /* ChannelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChannelsTableViewController.swift; path = /Users/elijah/Documents/SwordBot/SwordBot/SwordBot/ChannelsTableViewController.swift; sourceTree = "<absolute>"; };
 		CF1D0380214CB2B300ED7C06 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +98,9 @@
 		CF735DCF214E42FE00D2DD6D /* discord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discord.png; sourceTree = "<group>"; };
 		CFA3CDAD214EA28800EF3121 /* SwordBot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwordBot.png; sourceTree = "<group>"; };
 		CFA3CDAF214EA2C300EF3121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFA3CDB1214F305400EF3121 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CFA3CDB3214F5DE700EF3121 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		CFA3CDB4214F5DE700EF3121 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		CFC4DFE1214B6C9B0053DC9B /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
 		CFC4DFE3214B6F5B0053DC9B /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		CFC4DFE5214B70A40053DC9B /* logs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logs.png; sourceTree = "<group>"; };
@@ -164,6 +170,8 @@
 				CF1D0359214C7BDD00ED7C06 /* SwitchCell.xib */,
 				CF1D035C214C7BDD00ED7C06 /* TextFieldCell.swift */,
 				CF1D035D214C7BDD00ED7C06 /* TextFieldCell.xib */,
+				CFA3CDB3214F5DE700EF3121 /* TextCell.swift */,
+				CFA3CDB4214F5DE700EF3121 /* TextCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -227,7 +235,7 @@
 				CFD01A0D2149F75800C9936C /* song.mp3 */,
 				CFD01A13214A192200C9936C /* squid.jpg */,
 				CFDCBC372148757D00CFFBF8 /* AppDelegate.swift */,
-				CF1D0378214C8F1500ED7C06 /* ImageExtension.swift */,
+				CF1D0378214C8F1500ED7C06 /* Extensions.swift */,
 				CFDCBC392148757D00CFFBF8 /* FirstViewController.swift */,
 				CFDCBC3B2148757D00CFFBF8 /* SecondViewController.swift */,
 				CFD01A11214A144B00C9936C /* SettingsViewController.swift */,
@@ -235,6 +243,7 @@
 				CF1D0376214C850000ED7C06 /* TestCollectionViewController.swift */,
 				CF1D037C214CB20000ED7C06 /* ChannelsTableViewController.swift */,
 				CFDCBC3D2148757D00CFFBF8 /* Main.storyboard */,
+				CFA3CDB1214F305400EF3121 /* MainView.swift */,
 				CF735DCD214E271600D2DD6D /* TabBarController.swift */,
 				CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */,
 				CF1D0380214CB2B300ED7C06 /* NavigationController.swift */,
@@ -392,6 +401,7 @@
 				CF1D036A214C7BDE00ED7C06 /* FavouriteHeader.xib in Resources */,
 				CFD01A0E2149F75800C9936C /* song.mp3 in Resources */,
 				CFA3CDB0214EA2C300EF3121 /* Assets.xcassets in Resources */,
+				CFA3CDB6214F5DE700EF3121 /* TextCell.xib in Resources */,
 				CFA3CDAE214EA28800EF3121 /* SwordBot.png in Resources */,
 				CF1D036E214C7BDE00ED7C06 /* SwitchCell.xib in Resources */,
 				CF1D0364214C7BDE00ED7C06 /* BasicCell.xib in Resources */,
@@ -475,7 +485,7 @@
 				CF1D0369214C7BDE00ED7C06 /* FavouriteHeader.swift in Sources */,
 				CF1D0366214C7BDE00ED7C06 /* DynamicRow.swift in Sources */,
 				CF1D036B214C7BDE00ED7C06 /* FavouriteSection.swift in Sources */,
-				CF1D0379214C8F1500ED7C06 /* ImageExtension.swift in Sources */,
+				CF1D0379214C8F1500ED7C06 /* Extensions.swift in Sources */,
 				CFDCBC382148757D00CFFBF8 /* AppDelegate.swift in Sources */,
 				CF1D0383214CBC4D00ED7C06 /* ChatViewController.swift in Sources */,
 				CFD01A0A2149BD9E00C9936C /* BackgroundTask.swift in Sources */,
@@ -486,8 +496,10 @@
 				CFC4DFEC214C6BDB0053DC9B /* ServerTableViewCell.swift in Sources */,
 				CF1D036F214C7BDE00ED7C06 /* SwitchSection.swift in Sources */,
 				CF1D0365214C7BDE00ED7C06 /* BasicSection.swift in Sources */,
+				CFA3CDB2214F305400EF3121 /* MainView.swift in Sources */,
 				CF1D0381214CB2B300ED7C06 /* NavigationController.swift in Sources */,
 				CF1D036D214C7BDE00ED7C06 /* SwitchCell.swift in Sources */,
+				CFA3CDB5214F5DE700EF3121 /* TextCell.swift in Sources */,
 				CFDCBC3A2148757D00CFFBF8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +675,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -680,7 +692,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
