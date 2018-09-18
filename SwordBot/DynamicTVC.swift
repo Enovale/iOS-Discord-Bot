@@ -33,17 +33,8 @@ class DynamicTVC: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if(Bot.guildsAreReady == false) {
-            let alert = UIAlertController(title: "Can't open this page", message: "The bot isn't ready yet. Start your bot and come back.", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            
-            self.present(alert, animated: true)
-            return
-        } else {
-            registerRows()
-            setupTableViewSectionAndRows()
-        }
+        registerRows()
+        setupTableViewSectionAndRows()
     }
     
     private func setupTableViewSectionAndRows() {
@@ -82,7 +73,7 @@ class DynamicTVC: UITableViewController {
         sections.append(botCommands)
         
         var servers: [BasicCellWrapper] = []
-        for guild in Bot.guilds! {
+        for (_,guild) in (Bot.bot?.guilds)! {
             let members = "Server has " + String(describing: guild.memberCount!)
             let channels = " members and " + String(guild.channels.count)
             let emojis = " channels. Server has " + String(guild.emojis.count)

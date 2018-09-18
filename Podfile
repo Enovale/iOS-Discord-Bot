@@ -4,4 +4,7 @@ platform :ios, '11.1'
 target 'SwordBot' do
   use_frameworks!
   pod 'Sword'
+  pod "FaceCropper"
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 end

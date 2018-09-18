@@ -96,7 +96,7 @@ extension Sword {
       request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     }
 
-    #if os(macOS)
+    #if !os(Linux)
     if let file = file {
       let boundary = createBoundary()
       

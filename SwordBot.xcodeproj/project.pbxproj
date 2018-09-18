@@ -28,6 +28,8 @@
 		CF1D0381214CB2B300ED7C06 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0380214CB2B300ED7C06 /* NavigationController.swift */; };
 		CF1D0383214CBC4D00ED7C06 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */; };
 		CF2BB725214A4CA500953BE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF2BB724214A4CA400953BE8 /* README.md */; };
+		CF5ABF8821504EB300546B19 /* croptest.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5ABF8721504EB300546B19 /* croptest.png */; };
+		CF5ABF8A2150531C00546B19 /* testcrop.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF5ABF892150531C00546B19 /* testcrop.txt */; };
 		CF735DCE214E271600D2DD6D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF735DCD214E271600D2DD6D /* TabBarController.swift */; };
 		CF735DD0214E42FE00D2DD6D /* discord.png in Resources */ = {isa = PBXBuildFile; fileRef = CF735DCF214E42FE00D2DD6D /* discord.png */; };
 		CFA3CDAE214EA28800EF3121 /* SwordBot.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA3CDAD214EA28800EF3121 /* SwordBot.png */; };
@@ -94,6 +96,8 @@
 		CF1D0380214CB2B300ED7C06 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CF1D0382214CBC4D00ED7C06 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CF2BB724214A4CA400953BE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		CF5ABF8721504EB300546B19 /* croptest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = croptest.png; sourceTree = "<group>"; };
+		CF5ABF892150531C00546B19 /* testcrop.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testcrop.txt; sourceTree = "<group>"; };
 		CF735DCD214E271600D2DD6D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CF735DCF214E42FE00D2DD6D /* discord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discord.png; sourceTree = "<group>"; };
 		CFA3CDAD214EA28800EF3121 /* SwordBot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwordBot.png; sourceTree = "<group>"; };
@@ -220,12 +224,14 @@
 		CFDCBC362148757D00CFFBF8 /* SwordBot */ = {
 			isa = PBXGroup;
 			children = (
+				CF5ABF892150531C00546B19 /* testcrop.txt */,
 				CFA3CDAF214EA2C300EF3121 /* Assets.xcassets */,
 				CF1D0375214C7C0100ED7C06 /* Sections */,
 				CF1D0374214C7BF700ED7C06 /* Protocols */,
 				CF1D0373214C7BEB00ED7C06 /* Cells */,
 				CF2BB724214A4CA400953BE8 /* README.md */,
 				CF1D0346214C7BDB00ED7C06 /* DynamicTVC.swift */,
+				CF5ABF8721504EB300546B19 /* croptest.png */,
 				CFC4DFE5214B70A40053DC9B /* logs.png */,
 				CF735DCF214E42FE00D2DD6D /* discord.png */,
 				CFC4DFE7214B711A0053DC9B /* controls.png */,
@@ -409,6 +415,8 @@
 				CFDCBC3F2148757D00CFFBF8 /* Main.storyboard in Resources */,
 				CFC4DFE2214B6C9B0053DC9B /* blank.wav in Resources */,
 				CFC4DFE6214B70A40053DC9B /* logs.png in Resources */,
+				CF5ABF8A2150531C00546B19 /* testcrop.txt in Resources */,
+				CF5ABF8821504EB300546B19 /* croptest.png in Resources */,
 				CFC4DFE4214B6F5C0053DC9B /* settings.png in Resources */,
 				CF2BB725214A4CA500953BE8 /* README.md in Resources */,
 				CFD01A14214A192300C9936C /* squid.jpg in Resources */,
@@ -439,12 +447,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwordBot/Pods-SwordBot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FaceCropper/FaceCropper.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Sword/Sword.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaceCropper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sword.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,7 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWG8VUH2Z6;
 				INFOPLIST_FILE = SwordBot/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -689,7 +703,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWG8VUH2Z6;
 				INFOPLIST_FILE = SwordBot/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MemeInc.SwordBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
