@@ -11,6 +11,8 @@ import Sword
 import AVFoundation
 import MediaPlayer
 import Dispatch
+import FaceCropper
+import Alamofire
 
 struct Logs {
     static var logs = ""
@@ -116,6 +118,22 @@ class FirstViewController: UIViewController {
         if Settings.autoStart == true {
             StartBotButton()
         }
+    }
+    
+    //
+    // Convert String to base64
+    //
+    func convertImageToBase64(image: UIImage) -> String {
+        let imageData = UIImagePNGRepresentation(image)!
+        return imageData.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
+    }
+    
+    //
+    // Convert base64 to String
+    //
+    func convertBase64ToImage(imageString: String) -> UIImage {
+        let imageData = Data(base64Encoded: imageString, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
+        return UIImage(data: imageData)!
     }
     
     func UpdateSettings() {
@@ -251,7 +269,6 @@ class FirstViewController: UIViewController {
     func StartBot() {
         //task.startBackgroundTask()
         print(Settings.token)
-        Bot.bot?.editStatus(to: "online", playing: "with Sword!")
         
         Bot.bot?.on(.ready) { data in
             /*Bot.bot?.getUserGuilds { guilds, error in
@@ -280,11 +297,16 @@ class FirstViewController: UIViewController {
             
             if(msg.content.hasPrefix(Settings.prefix) || msg.author?.id == Bot.bot?.user?.id || Settings.chatLog == true) {
                 Logs.logs += (msg.author?.username)! + ": " + msg.content + "\n"
+                for attach in msg.attachments {
+                    Logs.logs += " " + attach.filename
+                }
             }
         }
         
         var pingOptions = CommandOptions()
         var yeetOptions = CommandOptions()
+        var cropOptions = CommandOptions()
+        cropOptions.description = "Crops an image to the first face it sees."
         yeetOptions.description = "Yeets whatever you want."
         pingOptions.description = "Simply replies 'Pong!' to test if the bot is working"
         
@@ -296,11 +318,99 @@ class FirstViewController: UIViewController {
             }
         }
         
+        Bot.bot?.register("facecrop", with: cropOptions) { msg, args in
+            if msg.attachments.count == 0 {
+                msg.reply(with: "Please attach a photo with a face in it.")
+                return
+            }
+                    var image: UIImage? = nil
+                    let url = URL(string: (msg.attachments.first?.url)!)
+                    if let data = try? Data(contentsOf: url!)
+                    {
+                        image = UIImage(data: data)
+                    }
+                    image?.face.crop { result in
+                        switch result {
+                        case .success(let faces):
+                            // When the `Vision` successfully find faces, and `FaceCropper` cropped it.
+                            // `faces` argument is a collection of cropped images.
+                            for face in faces {
+                                let _ = self.post(image: face, channel: msg.channel, for: "SwordBot")
+                            }
+                            
+                        case .notFound:
+                            // When the image doesn't contain any face, `result` will be `.notFound`.
+                            print("not found")
+                            msg.reply(with: "No faces detected. Please attach a photo with a face in it.")
+                            return
+                        case .failure(let error):
+                            // When the any error occured, `result` will be `failure`.
+                            print(error)
+                            msg.reply(with: "Broke, sorry")
+                            return
+                        }
+                    }
+            /*let image = UIImage(named: "croptest.png")
+            image?.face.crop { result in
+                switch result {
+                case .success(let faces):
+                    // When the `Vision` successfully find faces, and `FaceCropper` cropped it.
+                // `faces` argument is a collection of cropped images.
+                    print(self.convertImageToBase64(image: faces.first!))
+                    msg.reply(with: ["file": self.convertImageToBase64(image: faces.first!)])
+                case .notFound:
+                // When the image doesn't contain any face, `result` will be `.notFound`.
+                    print("not found")
+                case .failure(let error):
+                    // When the any error occured, `result` will be `failure`.
+                    print(error)
+                }
+            }*/
+        }
+        
         Bot.bot?.register("ping", with: pingOptions) { msg, args in
             msg.reply(with: "Pong!")
         }
         
         Bot.bot?.connect()
+    }
+    
+    func post(image: UIImage, channel: Channel, for username: String) -> String {
+        
+        let imageData = UIImagePNGRepresentation(image)
+        let base64Image = imageData?.base64EncodedString(options: .lineLength64Characters)
+        
+        let url = "https://api.imgur.com/3/upload"
+        
+        let parameters = [
+            "image": base64Image
+        ]
+        
+        var link = ""
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            if let imageData = UIImageJPEGRepresentation(image, 1) {
+                multipartFormData.append(imageData, withName: username, fileName: "\(username).png", mimeType: "image/png")
+            }
+            
+            for (key, value) in parameters {
+                multipartFormData.append((value?.data(using: .utf8))!, withName: key)
+            }}, to: url, method: .post, headers: ["Authorization": "Client-ID " + "94a7d8b1f23d2d1"],
+                encodingCompletion: { encodingResult in
+                    switch encodingResult {
+                    case .success(let upload, _, _):
+                        upload.response { response in
+                            //This is what you have been missing
+                            let json = try? JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [String:Any]
+                            let imageDic = json?["data"] as? [String:Any]
+                            link = imageDic?["link"] as! String
+                            Bot.bot!.send(["file": link], to: channel.id)
+                        }
+                    case .failure(let encodingError):
+                        print("error:\(encodingError)")
+                    }
+        })
+        return link
     }
     
     func guildsAreReady() {
@@ -322,6 +432,8 @@ class FirstViewController: UIViewController {
         print("Bot started!")
         UIApplication.shared.endIgnoringInteractionEvents()
         activityView.stopAnimating()
+        
+        Bot.bot?.editStatus(to: "online", playing: "with Sword!")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
